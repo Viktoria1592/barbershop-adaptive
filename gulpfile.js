@@ -1,30 +1,33 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var plumber = require("gulp-plumber");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    browserSync = require('browser-sync');
 
-gulp.task("style", function() {
-  gulp.src("sass/style.scss")
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(gulp.dest("css"))
-    .pipe(server.stream());
+
+
+
+
+gulp.task('sass', function(){ // Создаем таск "sass"
+    return gulp.src('app/sass/**/*.scss') // Берем источник
+        .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
+        .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
+    .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
 
-gulp.task("serve", ["style"], function() {
-  server.init({
-    server: ".",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
+gulp.task('browser-sync', function() { // Создаем таск browser-sync
+    browserSync({ // Выполняем browser Sync
+        server: { // Определяем параметры сервера
+            baseDir: 'app' // Директория для сервера - app
+        },
+        notify: false // Отключаем уведомления
+    });
 });
+
+
+gulp.task('watch', ['browser-sync', 'sass'], function() {
+    gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
+    gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
+    gulp.watch('app/js/**/*.js', browserSync.reload); // Наблюдение за JS файлами в папке js
+});
+
+
+gulp.task('default', ['watch']);
