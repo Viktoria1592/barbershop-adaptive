@@ -1,5 +1,7 @@
 body {
-  background-color: pink;
-  color: #ffffff;
-  font-size: 20px;
-  line-height: 20px; }
+  font-size: 17px;
+  font-family: "Arial, sans-serif";
+  font-weight: 400;
+  margin: 0;
+  background-color: gray;
+  color: yellow; }
