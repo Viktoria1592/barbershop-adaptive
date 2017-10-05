@@ -1,6 +1,7 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    browserSync = require('browser-sync');
+var gulp = require('gulp');
+var  sass = require('gulp-sass');
+var  browserSync = require('browser-sync');
+var autoprefixer = require('gulp-autoprefixer');
 
 
 
@@ -8,9 +9,10 @@ var gulp = require('gulp'),
 
 gulp.task('sass', function(){ // Создаем таск "sass"
     return gulp.src('app/sass/**/*.scss') // Берем источник
-        .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
+        .pipe(sass().on('error', sass.logError)) // Преобразуем Sass в CSS посредством gulp-sass
+        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
-    .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
 
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
@@ -28,6 +30,5 @@ gulp.task('watch', ['browser-sync', 'sass'], function() {
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
     gulp.watch('app/js/**/*.js', browserSync.reload); // Наблюдение за JS файлами в папке js
 });
-
 
 gulp.task('default', ['watch']);
