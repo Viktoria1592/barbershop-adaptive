@@ -1,7 +1,47 @@
+@import url(../../node_modules/normalize.css/normalize.css);
+@font-face {
+  font-family: 'PT_Sans-Narrow';
+  src: url("../../fonts/PT_SansNarrowWebRegular.eot");
+  src: url("../../fonts/PT_SansNarrowWebRegular.eot") format("embedded-opentype"), url("../../fonts/PT_SansNarrowWebRegular.woff2") format("woff2"), url("../../fonts/PT_SansNarrowWebRegular.woff") format("woff"), url("../../fonts/PT_SansNarrowWebRegular.ttf") format("truetype"), url("../../fonts/PT_SansNarrowWebRegular.svg#PT_SansNarrowWebRegular") format("svg");
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'PT_Sans-Narrow';
+  src: url("../../fonts/PTSans-NarrowBold.eot");
+  src: url("../../fonts/PTSans-NarrowBold.eot") format("embedded-opentype"), url("../../fonts/PTSans-NarrowBold.woff") format("woff"), url("../../fonts/PTSans-NarrowBold.ttf") format("truetype"), url("../../fonts/PTSans-NarrowBold.svg#PTSans-NarrowBold") format("svg");
+  font-style: normal;
+  font-weight: 700; }
+
 body {
-  font-size: 17px;
-  font-family: "Arial, sans-serif";
+  font-size: 18px;
+  font-family: "PT_Sans-Narrow", sans-serif, "Arial";
   font-weight: 400;
-  margin: 0;
-  background-color: gray;
-  color: yellow; }
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  padding: 0;
+  margin: 0; }
+
+ul {
+  list-style: none; }
+
+.visually-hidden {
+  visibility: hidden; }
+
+.page-header {
+  background-color: #292929;
+  color: #ffffff; }
+
+.nav-menu__header-navigation {
+  background-color: #ffffff;
+  font-size: 50px; }

@@ -1,2 +1,8 @@
-@import 'variables';
-@import 'basic';
+@import '../../node_modules/normalize.css/normalize.css';
+@import 'helpers/fonts';
+@import 'helpers/variables';
+@import 'helpers/basic';
+@import 'helpers/mixin';
+@import 'blocks/page-header';
+@import 'blocks/nav-menu';
+//@import 'blocks/**/*.scss';
