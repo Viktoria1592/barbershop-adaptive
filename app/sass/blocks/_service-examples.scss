@@ -1,0 +1,11 @@
+.service-examples {
+    &__client-name {
+        @extend %heading-2;
+        
+    }
+    &__client-review {
+        margin: 0;
+         padding: 0;
+        
+    }
+}

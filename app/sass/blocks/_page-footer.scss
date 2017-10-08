@@ -1,0 +1,27 @@
+.page-footer {background-color: #292929;
+    &__address {text-align: center;
+        &-description {
+            padding: 0;
+            margin: 0;
+            color: $color-main;
+            
+        }
+        
+    }
+    
+     &__telephone {@extend %links;
+         
+        
+    }
+     &__developers {text-align: center;
+         & span {color: $color-main;
+             
+         }
+        
+    }
+    
+    &__developer-name {
+        @extend %links;
+        text-transform: uppercase;
+    }
+}

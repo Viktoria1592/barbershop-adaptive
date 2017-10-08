@@ -1,0 +1,31 @@
+.features-text {
+    &__advantage {
+        @extend %heading-1;
+        display: block;
+        text-align: center;
+    }
+    &__description {
+        @extend %text;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.features-stats {
+    
+    &__item {
+        &--color-1 { background-color: #404040;}
+        &--color-2 { background-color: #4e4e4e;}
+        &--color-3 { background-color: $background-color-main;}
+    }
+    &__number {color: $color-main;
+        @extend %text-big;
+        
+    }
+    &__text {color: $color-main;
+        
+        
+    }
+        
+    }

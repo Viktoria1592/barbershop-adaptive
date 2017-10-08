@@ -1,18 +1,20 @@
 @font-face {
-    font-family: 'PT_Sans-Narrow';
-    src: url('../../fonts/PT_SansNarrowWebRegular.eot');
-    src: url('../../fonts/PT_SansNarrowWebRegular.eot') format('embedded-opentype'), url('../../fonts/PT_SansNarrowWebRegular.woff2') format('woff2'), url('../../fonts/PT_SansNarrowWebRegular.woff') format('woff'), url('../../fonts/PT_SansNarrowWebRegular.ttf') format('truetype'), url('../../fonts/PT_SansNarrowWebRegular.svg#PT_SansNarrowWebRegular') format('svg');
+    font-family: 'PTSansNarrow';
+    src: url('../fonts/PTSansNarrowRegular.eot');
+    src: url('../fonts/PTSansNarrowRegular.eot') format('embedded-opentype'), url('../fonts/PTSansNarrowRegular.woff2') format('woff2'), url('../fonts/PTSansNarrowRegular.woff') format('woff'), url('../fonts/PTSansNarrowRegular.ttf') format('truetype'), url('../fonts/PTSansNarrowRegular.svg#PTSansNarrowRegular') format('svg');
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'PT_Sans-Narrow';
-    src: url('../../fonts/PTSans-NarrowBold.eot');
-    src: url('../../fonts/PTSans-NarrowBold.eot') format('embedded-opentype'),
-    url('../../fonts/PTSans-NarrowBold.woff') format('woff'), 
-    url('../../fonts/PTSans-NarrowBold.ttf') format('truetype'), 
-    url('../../fonts/PTSans-NarrowBold.svg#PTSans-NarrowBold') format('svg');
+    font-family: 'PTSansNarrow';
+    src: url('../fonts/PTSansNarrowBold.eot');
+    src: url('../fonts/PTSansNarrowBold.eot') format('embedded-opentype'),
+    url('../fonts/PTSansNarrowBold.woff') format('woff'), 
+    url('../fonts/PTSansNarrowBold.ttf') format('truetype'), 
+    url('../fonts/PTSansNarrowBold.svg#PTSansNarrowBold') format('svg');
     font-style: normal;
     font-weight: 700;
 }
+
+

@@ -1,0 +1,19 @@
+.reviews {
+    &__title {
+        @extend %heading-1;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    &-slider__name {
+        @extend %heading-2;
+        
+    }
+     &-slider__text {
+        margin: 0;
+         padding: 0;
+         
+        
+    }
+    
+}

@@ -1,0 +1,14 @@
+.features-slider {background-color: $background-color-main;
+    color: $color-main;
+    &__advantage {display: block;
+        text-align: center;
+        @extend %heading-1;
+    }
+    &__quality {
+        @extend %text;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        
+    } 
+}
