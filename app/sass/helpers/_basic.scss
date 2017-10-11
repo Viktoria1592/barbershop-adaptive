@@ -2,7 +2,7 @@ body {
     font-size: $font-size-base;
     font-family: $font-family-base;
     font-weight: $font-weight-base;
-    background-color: $background-color-base;
+    background-color: $color-main;
     color: $color-base;
     line-height: $line-height-base;
 }
@@ -33,9 +33,9 @@ img {
 
 .wrapper {
     margin: 0 auto;
-    width: 300px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 320px;
+//    padding-left: 10px;
+//    padding-right: 10px;
 }
 
 %heading-1 {
@@ -58,7 +58,7 @@ img {
 
 %text-big {
     font-size: 40px;
-    line-height: 0.45;
+    line-height: 1.5;
     font-weight: 700;
 }
 

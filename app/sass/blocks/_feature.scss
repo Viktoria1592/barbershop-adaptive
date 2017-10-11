@@ -3,29 +3,53 @@
         @extend %heading-1;
         display: block;
         text-align: center;
+        padding-bottom: 25px;
+        padding-top: 32px;
     }
     &__description {
         @extend %text;
         padding: 0;
+        padding-bottom: 25px;
         margin: 0;
         text-align: center;
+    }
+    &--border {
+        border-bottom: 8px solid $background-color-main;
     }
 }
 
 .features-stats {
-    
     &__item {
-        &--color-1 { background-color: #404040;}
-        &--color-2 { background-color: #4e4e4e;}
-        &--color-3 { background-color: $background-color-main;}
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 9px 0 9px 20px;
+        &--color-1 {
+            background-color: #404040;
+        }
+        &--color-2 {
+            background-color: #4e4e4e;
+        }
+        &--color-3 {
+            background-color: $background-color-main;
+        }
+        &--pos {
+            padding: 0;
+        }
     }
-    &__number {color: $color-main;
+    &__false {
+        color: #7b7b7b;
+        @extend %text;
+        margin: 0 auto;
+    }
+    &__number {
+        color: $color-main;
         @extend %text-big;
-        
     }
-    &__text {color: $color-main;
-        
-        
+    &__text {
+        color: $color-main;
+        padding-right: 20px;
+        flex-basis: 110px;
+        text-align: right;
     }
-        
-    }
+}

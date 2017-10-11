@@ -1,12 +1,77 @@
 .nav-menu {
-    &__header-navigation {
+    &--pos {
+        position: relative;
+        margin-left: 72px;
     }
-    &__menu-list {}
-    &__menu-item a {font-size: 18px;
-    line-height: 1.3;
-    font-weight: 700;
-    color: #ffffff;
-    text-transform: uppercase;
-    text-decoration: none;}
-
+    &--color {
+        background-color: #6a4d38;
+    }
+    &__header-navigation {
+        border: none;
+        outline: none;
+        &--bg-color {
+            background-color: #6a4d38;
+        }
+        &--pos {
+            position: absolute;
+            width: 72px;
+            height: 50px;
+            top: 0;
+            left: -72px;
+        }
+        &--pos::before,
+        &--pos::after {
+            position: absolute;
+            content: '';
+            width: 25px;
+            height: 2px;
+            top: 50%;
+            left: 35%;
+            background-color: $color-main;
+        }
+        &--pos:before {
+            transform: rotate(45deg);
+        }
+        &--pos:after {
+            transform: rotate(-45deg);
+        }
+    }
+    &__menu-list {
+        &--bg-color {
+            background-color: #826550;
+        }
+    }
+    &__menu-item {
+        padding: 13px 10px;
+        a {
+            font-size: 18px;
+            line-height: 1.3;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: block;
+        }
+        &--border {
+            border-top: 1px solid #886e5b;
+            border-bottom: 1px solid #71543f;
+        }
+    }
+    &__entry {
+        a {
+            @extend %links;
+            padding-left: 48px;
+            padding-top: 15px;
+            display: block;
+            font-weight: 400;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                background-image: url("img/login.png");
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
 }

@@ -4,6 +4,7 @@
         margin: 0;
         padding: 0;
         text-align: center;
+        padding-top: 35px;
         
         
     }
@@ -12,4 +13,44 @@
         
         
     }
+    &__item {
+        
+        display: flex;
+        justify-content: space-between;
+        &--border {
+            border-bottom: 1px solid #e5ddd5;
+        }
+    }
+    &__date {
+        @extend %heading-1;
+        color: $color-main;
+        width: 50px;
+        height: 50px;
+        background-color: $color-base;
+        
+        
+        span {
+            @extend %text-small;
+            text-transform: lowercase;
+            display: block;
+            
+        }
+        &::after {
+            position: absolute;
+            content: "";
+//            @include triangle(black, bottom, 10px);
+            
+        }
+        
+    }
+}
+.link-item {
+    @extend %links;
+    color: $color-base;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    
+	
 }

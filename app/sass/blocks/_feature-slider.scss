@@ -1,14 +1,19 @@
 .features-slider {background-color: $background-color-main;
     color: $color-main;
-    &__advantage {display: block;
-        text-align: center;
-        @extend %heading-1;
-    }
-    &__quality {
-        @extend %text;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        
-    } 
+    min-height: 360px;
+
+}
+
+#features-slide-1:checked ~.slider__control label[for="features-slide-1"],
+#features-slide-2:checked ~.slider__control label[for="features-slide-2"],
+#features-slide-3:checked ~.slider__control label[for="features-slide-3"] {background-color: $color-main;
+            border-color: $color-main;
+    
+}
+#features-slide-1:checked ~ slider__block .slider-1,
+#features-slide-2:checked ~ slider__block .slider-2,
+#features-slide-3:checked ~ slider__block .slider-3 {
+//    display: block;
+    opacity: 1;
+    z-index: 1;
 }

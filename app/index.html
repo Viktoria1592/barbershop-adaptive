@@ -10,32 +10,32 @@
     <header class="page-header  page-header--color   wrapper">
 <h2 class="page-header__title  visually-hidden">Барбершоп Бородинский</h2>
         <div class="page-header__logo">
-            <img src="img/logotype-mobile.svg" alt="Логотип">
+            <img src="img/logotype-mobile.svg%C2%A0%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5.svg" width="230" height="40" alt="Логотип">
 
         </div>
-        <nav class="nav-menu">
-          <button class="nav-menu__header-navigation" type="button">Открыть меню</button>
-            <ul class="nav-menu__menu-list">
-                <li class="nav-menu__menu-item  nav-menu__menu-item--active"><a href="">Главная</a></li>
-                <li class="nav-menu__menu-item"><a href="photo.html">Наши работы</a></li>
-                <li class="nav-menu__menu-item"><a href="form.html">Записаться</a></li>
-                <li class="nav-menu__menu-item"><a href="#">Контакты</a></li>
-                <li class="nav-menu__menu-item"><a href="#">Html academy</a></li>
+        <nav class="nav-menu nav-menu--pos  nav-menu--color">
+          <button class="nav-menu__header-navigation  nav-menu__header-navigation--bg-color  nav-menu__header-navigation--pos" type="button"></button>
+            <ul class="nav-menu__menu-list  nav-menu__menu-list--bg-color">
+                <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a href="">Главная</a></li>
+                <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="photo.html">Наши работы</a></li>
+                <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="form.html">Записаться</a></li>
+                <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#">Контакты</a></li>
+                <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#">Html academy</a></li>
             </ul>
-        </nav>
-        <div class="page-header__entry">
+            <div class="nav-menu__entry">
             <a href="#" title="Войти">Вход</a></div>
+        </nav>
     </header>
     <main>
         <section class="features  wrapper">
             <h2 class="features__title  visually-hidden">Наши преимущества</h2>
-            <div class="features-text">
+            <div class="features-text  features-text--border">
                 <b class="features-text__advantage">Стрижка у нас это выгодно!</b>
                 <p class="features-text__description">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
             </div>
             <ul class="features-stats">
                 <li class="features-stats__item  features-stats__item--color-1">
-                    <b class="features-stats__number">1500</b>
+                    <b class="features-stats__number">1500<sup>*</sup></b>
                     <span class="features-stats__text">рублей вложений</span>
                 </li>
                 <li class="features-stats__item  features-stats__item--color-2">
@@ -47,57 +47,84 @@
                     <span class="features-stats__text">постриженных волос</span>
                 </li>
                 <li class="features-stats__item  features-stats__item--color-2">
-                    <b class="features-stats__number">500 000</b>
+                    <b class="features-stats__number">500 000<sup>*</sup></b>
                     <span class="features-stats__text">лайков и комплиментов</span>
                 </li>
             <li class="features-stats__item  features-stats__item--color-3">
-                <span>- приведенные данные ложь</span>
+                <span class="features-stats__false"> <sup>*</sup>- приведенные данные ложь</span>
             </li>
              </ul>
             </section>
             <section class="features-slider  slider  wrapper">
                <h2 class="features-slider__title  visually-hidden">Слайдер преимуществ</h2>
-                <div class="features-slider__text  slider__text">
-                    <b class="features-slider__advantage">Быстро</b>
-                    <p class="features-slider__quality">Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки</p>
+               <input class="slider__input" type="radio" name="features" id="features-slide-1">
+                <input class="slider__input" type="radio" name="features" id="features-slide-2">
+                <input class="slider__input" type="radio" name="features" id="features-slide-3">
+                <div class="slider__block">
+                    <div class="slider-text  slider-1">
+                       <img src="img/advantage-1-illustration.svg" width="100" height="100" alt="">
+                        <b class="slider__advantage">Быстро</b>
+                        <p class="slider__quality">Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки!</p>
+                    </div>
+                     <div class="slider-text  slider-2">
+                       <img src="img/advantage-2-illustration.svg" width="100" height="100" alt="">
+                        <b class="slider__advantage">Круто</b>
+                        <p class="slider__quality">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
+                    </div>
+                     <div class="slider-text  slider-3">
+                       <img src="img/advantage-3-illustration.svg" width="100" height="100" alt="">
+                        <b class="slider__advantage">Дорого</b>
+                        <p class="slider__quality">Наши мастера-профессионалы своего дела, и не могут стоить дешево. К тому же, разве цена не дает определенный статус?</p>
+                    </div>
                 </div>
-                <input class="features-slider__input  slider__input" type="radio" name="features" id="features-slide-1">
-                <input class="features-slider__input  slider__input" type="radio" name="features" id="features-slide-2">
-                <input class="features-slider__input  slider__input" type="radio" name="features" id="features-slide-3">
-                <div class="features-slider__control  slider__control">
-                    <label class="features-slider__toggle  slider__toggle" for="features-slide-1"></label>
-                    <label class="features-slider__toggle  slider__toggle" for="features-slide-2"></label>
-                    <label class="features-slider__toggle  slider__toggle" for="features-slide-3"></label>
+                <div class="slider__control">
+                    <label class="slider__toggle slider__toggle--color-white  slider__toggle--pos" for="features-slide-1"></label>
+                    <label class="slider__toggle slider__toggle--color-white  slider__toggle--pos" for="features-slide-2"></label>
+                    <label class="slider__toggle slider__toggle--color-white  slider__toggle--pos" for="features-slide-3"></label>
                 </div>
         </section>
         <section class="news  wrapper">
             <h2 class="news__title">Новости и акции</h2>
-            <div class="news__item">
-                <date class="news__date">29 сент</date>
+            <div class="news__item  news__item--border">
+                <date class="news__date">29<span>сент</span></date>
                 <p class="news__description">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
             </div>
-            <div class="news__item">
-                <date class="news__date">19 сент</date>
+            <div class="news__item  news__item--border">
+                <date class="news__date">19<span>сент</span></date>
                 <p class="news__description"> В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!</p>
             </div>
-            <a href="#">Показать все</a>
+            <a class="link-item" href="#">Показать все</a>
         </section>
-        <section class="reviews  slider  wrapper">
-            <h2 class="reviews__title">Отзывы о нас</h2>
-                <div class="reviews-slider__item  slider__text">
-                    <img src="" alt="">
-                    <b class="reviews-slider__name">Трэвис Баркер</b>
-                    <p class="reviews-slider__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
-                    <button class="reviews__prew" type="button">Предыдущий отзыв</button>
-                    <button class="reviews__next" type="button">Следующий отзыв</button>
+        <section class="service-examples  slider  wrapper">
+            <h2 class="service-examples__title">Отзывы о нас</h2>
+              <input class="slider__input" type="radio" name="reviews" id="reviews-slide-1">
+                <input class="slider__input" type="radio" name="reviews" id="reviews-slide-2">
+                <input class="slider__input" type="radio" name="reviews" id="reviews-slide-3">
+               <div class="slider__block">
+                     <div class="service-examples__review  slider-text  slider-1">
+                        <img src="" alt="">
+                        <b class="service-examples__client-name">Трэвис Баркер</b>
+                        <p class="service-examples__client-review">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                    <!--
+                        <button class="reviews__prew" type="button">Предыдущий отзыв</button>
+                        <button class="reviews__next" type="button">Следующий отзыв</button>
+                    -->
+                    </div>
+                    <div class="service-examples__review  slider-text  slider-2">
+                        <img src="" alt="">
+                        <b class="service-examples__client-name">Саша Мальцев</b>
+                        <p class="service-examples__client-review">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?</p>
+                   </div>
+                        <div class="service-examples__review  slider-text  slider-3">
+                        <img src="" alt="">
+                        <b class="service-examples__client-name">Лжепётр Мчиславский</b>
+                        <p class="service-examples__client-review">Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</p>
+                   </div>
                 </div>
-                <input class="reviews-slider__input  slider__input" type="radio" name="reviews" id="reviews-slide-1">
-                <input class="reviews-slider__input  slider__input" type="radio" name="reviews" id="reviews-slide-2">
-                <input class="reviews-slider__input  slider__input" type="radio" name="reviews" id="reviews-slide-3">
-                <div class="reviews-slider__control  slider__control">
-                    <label class="reviews-slider__toggle  slider__toggle" for="reviews-slide-1"></label>
-                    <label class="reviews-slider__toggle  slider__toggle" for="reviews-slide-2"></label>
-                    <label class="reviews-slider__toggle  slider__toggle" for="reviews-slide-3"></label>
+                <div class="slider__control">
+                    <label class="slider__toggle  slider__toggle--color-black  slider__toggle--pos" for="reviews-slide-1"></label>
+                    <label class="slider__toggle  slider__toggle--color-black  slider__toggle--pos" for="reviews-slide-2"></label>
+                    <label class="slider__toggle  slider__toggle--color-black  slider__toggle--pos" for="reviews-slide-3"></label>
             </div>
         </section>
     </main>
