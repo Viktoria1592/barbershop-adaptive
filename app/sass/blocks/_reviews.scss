@@ -1,4 +1,20 @@
 .reviews {
+   &__wrapper {
+        @include wrapper;
+        width: 320px;
+        @media (min-width:768px) and (max-width:1200px)
+        {
+            width: 640px;
+            padding-left: 65px;
+            padding-right: 65px;
+        }
+        @media (min-width:1200px) {
+            width: 960px;
+            padding-left: 120px;
+            padding-right: 120px;
+            
+        }
+    }
     &__title {
         @extend %heading-1;
         padding: 0;
@@ -29,10 +45,11 @@
             border-color: $color-slider;
     
 }
-#reviews-slide-1:checked ~ slider__block .slider-1,
-#reviews-slide-2:checked ~ slider__block .slider-2,
-#reviews-slide-3:checked ~ slider__block .slider-3 {
-//    display: block;
+
+#reviews-slide-1:checked ~ .slider__block .slider-1,
+#reviews-slide-2:checked ~ .slider__block .slider-2,
+#reviews-slide-3:checked ~ .slider__block .slider-3 {
+
     opacity: 1;
     z-index: 1;
 }

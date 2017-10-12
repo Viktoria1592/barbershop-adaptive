@@ -1,13 +1,28 @@
 .slider {
     position: relative;
+  &__wrapper {
+        @include wrapper;
+        width: 320px;
+        @media (min-width:768px) and (max-width:1200px)
+        {
+            width: 640px;
+            padding-left: 65px;
+            padding-right: 65px;
+        }
+        @media (min-width:1200px) {
+            width: 960px;
+            padding-left: 120px;
+            padding-right: 120px;
+            
+        }
+    }
     &__block {position: relative;
         
     }
     &-text {position: absolute;
-//        display: none;
         z-index: 0;
         opacity: 0;
-        transition: all 0.2 linear;
+        transition: all 0.2s linear;
         
     }
      &__input {
@@ -30,6 +45,7 @@
         position: absolute;
         bottom: 10px;
         left: 35%;
+        z-index: 100;
         
     }
     &__toggle {width: 5px;
@@ -49,11 +65,13 @@
             border-color: $color-main;
         }
         }
+        
         &--color-black {
            border: 1px solid #858483;
             
             
-            &:hover {
+            &:hover,
+            &:active {
             background-color: $color-slider;
             border-color: $color-slider;
         }

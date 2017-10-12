@@ -7,32 +7,38 @@
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
-    <header class="page-header  page-header--color  wrapper">
-       <h2 class="page-header__title  visually-hidden">Барбершоп Бородинский</h2>
+     <header class="page-header  page-header--color   page-header__wrapper">
+<h2 class="page-header__title  visually-hidden">Барбершоп Бородинский</h2>
         <div class="page-header__logo">
-            <img src="img/logotype-mobile.svg" alt="Логотип">
+            <img src="img/logotype-mobile.svg%C2%A0%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5.svg" width="230" height="40" alt="Логотип">
+
         </div>
-        <nav class="nav-menu">
-          <button class="nav-menu__header-navigation" type="button">Открыть меню</button>
-            <ul class="nav-menu__menu-list">
-                <li class="nav-menu__menu-item"><a href="index.html">Главная</a></li>
-                <li class="nav-menu__menu-item nav-menu__menu-item--active"><a href="">Наши работы</a></li>
-                <li class="nav-menu__menu-item"><a href="form.html">Записаться</a></li>
-                <li class="nav-menu__menu-item"><a href="#">Контакты</a></li>
-                <li class="nav-menu__menu-item"><a href="#">Html academy</a></li>
-            </ul>
+        <nav class="nav-menu nav-menu--pos   nav-menu--closed">
+          <button class="nav-menu__header-navigation  nav-menu__header-navigation--bg-color  nav-menu__header-navigation--pos" type="button"></button>
+            <div class="nav-menu__wrapper">
+                <ul class="nav-menu__menu-list  nav-menu__menu-list--bg-color">
+                    <li class="nav-menu__menu-item   nav-menu__menu-item--border"><a href="index.html">Главная</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a href="">Наши работы</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="form.html">Записаться</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#">Контакты</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#">Html academy</a></li>
+                    
+                </ul>
+                <div class="nav-menu__entry">
+                <a href="#" title="Войти">Вход</a></div>
+            </div>
         </nav>
-        <div class="page-header__entry">
-            <a href="#" title="Войти">Вход</a></div>
     </header>
     <main>
-       <article class="service-examples  wrapper">
+       <article class="service-examples  service-examples__wrapper">
            <h2 class="service-examples__title">Наши работы</h2>
            <section class="service-examples__review">
               <img src="" alt="">
               <span class="service-examples__best-work">Работа месяца</span>
-               <b class="service-examples__client-name">Лжепётр Мчиславский</b>
-               <p class="service-examples__client-review">Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</p>
+              <div class="service-examples__client  service-examples__client--pos">
+                    <b class="service-examples__client-name">Лжепётр Мчиславский</b>
+                   <p class="service-examples__client-review">Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</p>
+               </div>
                <div class="service-examples__service-name">
                <span>Стрижка</span>
                <span>Бритье</span>
@@ -41,16 +47,20 @@
            </section>
            <section class="service-examples__review">
               <img src="" alt="">
-               <b class="service-examples__client-name">Саша Мальцев</b>
-               <p class="service-examples__client-review">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45? </p>
+              <div class="service-examples__client  service-examples__client--pos">
+                    <b class="service-examples__client-name">Саша Мальцев</b>
+                   <p class="service-examples__client-review">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45? </p>
+               </div>
                <div class="service-examples__service-name">
                <span>Стрижка</span>
                </div>
            </section>
            <section class="service-examples__review">
               <img src="" alt="">
-               <b class="service-examples__client-name">Владимир Иваныч</b>
-               <p class="service-examples__client-review">К зимнему сезону — готов!</p>
+               <div class="service-examples__client">
+                   <b class="service-examples__client-name  service-examples__client--pos">Владимир Иваныч</b>
+                   <p class="service-examples__client-review">К зимнему сезону — готов!</p>
+               </div>
                <div class="service-examples__service-name">
                <span>Борода</span>
                <span>Усы</span>
@@ -58,14 +68,16 @@
            </section>
            <section class="service-examples__review">
               <img src="" alt="">
-               <b class="service-examples__client-name">Винстон Синий</b>
-               <p class="service-examples__client-review">Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!</p>
+               <div class="service-examples__client">
+                   <b class="service-examples__client-name  service-examples__client--pos">Винстон Синий</b>
+                   <p class="service-examples__client-review">Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!</p>
+               </div>
                <div class="service-examples__service-name">
                <span>Стрижка</span>
                </div>
            </section>
         </article>
-        <section class="prices  wrapper">
+        <section class="prices  prices__wrapper">
            <h2>Прейскурант</h2>
             <table class="prices__price-list">
                 <tr class="prices__price-item">
@@ -94,7 +106,7 @@
             </div>
         </section>
     </main>
-    <footer class="page-footer  wrapper">
+    <footer class="page-footer  page-footer__wrapper">
         <div class="page-footer__address">
             <p class="page-footer__address-description">
                 <b>Барбершоп Бородинский</b> <br> г.Санкт-Петербург, ул.Большая Конюшенная, 19/8 <br>
@@ -111,6 +123,22 @@
             <a class="page-footer__developer-name" href="#">Html academy</a>
         </div>
     </footer>
+    <script>
+        var MainNav = document.querySelector ('.nav-menu');
+        var NavButton = document.querySelector ('.nav-menu__header-navigation'); 
+        
+        NavButton.addEventListener('click', function() {
+            if (MainNav.classList.contains('nav-menu--closed')) {
+                MainNav.classList.remove('nav-menu--closed');
+             MainNav.classList.add('nav-menu--opened');
+                }
+            else {
+                MainNav.classList.add('nav-menu--closed');
+                  MainNav.classList.remove('nav-menu--opened');
+                
+            }      
+        });
+    </script>
 </body>
 
 </html>

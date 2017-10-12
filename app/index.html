@@ -7,27 +7,30 @@
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
-    <header class="page-header  page-header--color   wrapper">
+    <header class="page-header  page-header--color   page-header__wrapper">
 <h2 class="page-header__title  visually-hidden">Барбершоп Бородинский</h2>
         <div class="page-header__logo">
             <img src="img/logotype-mobile.svg%C2%A0%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5.svg" width="230" height="40" alt="Логотип">
 
         </div>
-        <nav class="nav-menu nav-menu--pos  nav-menu--color">
+        <nav class="nav-menu nav-menu--pos   nav-menu--closed">
           <button class="nav-menu__header-navigation  nav-menu__header-navigation--bg-color  nav-menu__header-navigation--pos" type="button"></button>
-            <ul class="nav-menu__menu-list  nav-menu__menu-list--bg-color">
-                <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a href="">Главная</a></li>
-                <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="photo.html">Наши работы</a></li>
-                <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="form.html">Записаться</a></li>
-                <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#">Контакты</a></li>
-                <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#">Html academy</a></li>
-            </ul>
-            <div class="nav-menu__entry">
-            <a href="#" title="Войти">Вход</a></div>
+            <div class="nav-menu__wrapper">
+                <ul class="nav-menu__menu-list  nav-menu__menu-list--bg-color">
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a href="">Главная</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="photo.html">Наши работы</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="form.html">Записаться</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#">Контакты</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#">Html academy</a></li>
+                    
+                </ul>
+                <div class="nav-menu__entry">
+                <a href="#" title="Войти">Вход</a></div>
+            </div>
         </nav>
     </header>
     <main>
-        <section class="features  wrapper">
+        <section class="features  features__wrapper">
             <h2 class="features__title  visually-hidden">Наши преимущества</h2>
             <div class="features-text  features-text--border">
                 <b class="features-text__advantage">Стрижка у нас это выгодно!</b>
@@ -55,23 +58,23 @@
             </li>
              </ul>
             </section>
-            <section class="features-slider  slider  wrapper">
+            <section class="features-slider  features-slider--pos  slider  slider__wrapper">
                <h2 class="features-slider__title  visually-hidden">Слайдер преимуществ</h2>
-               <input class="slider__input" type="radio" name="features" id="features-slide-1">
+               <input class="slider__input" type="radio" name="features" id="features-slide-1" checked>
                 <input class="slider__input" type="radio" name="features" id="features-slide-2">
                 <input class="slider__input" type="radio" name="features" id="features-slide-3">
                 <div class="slider__block">
-                    <div class="slider-text  slider-1">
+                    <div class="features-slider__item  slider-text  slider-1">
                        <img src="img/advantage-1-illustration.svg" width="100" height="100" alt="">
                         <b class="slider__advantage">Быстро</b>
                         <p class="slider__quality">Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки!</p>
                     </div>
-                     <div class="slider-text  slider-2">
+                     <div class="features-slider__item  slider-text  slider-2">
                        <img src="img/advantage-2-illustration.svg" width="100" height="100" alt="">
                         <b class="slider__advantage">Круто</b>
                         <p class="slider__quality">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
                     </div>
-                     <div class="slider-text  slider-3">
+                     <div class="features-slider__item  slider-text  slider-3">
                        <img src="img/advantage-3-illustration.svg" width="100" height="100" alt="">
                         <b class="slider__advantage">Дорого</b>
                         <p class="slider__quality">Наши мастера-профессионалы своего дела, и не могут стоить дешево. К тому же, разве цена не дает определенный статус?</p>
@@ -83,42 +86,48 @@
                     <label class="slider__toggle slider__toggle--color-white  slider__toggle--pos" for="features-slide-3"></label>
                 </div>
         </section>
-        <section class="news  wrapper">
+        <section class="news  news__wrapper">
             <h2 class="news__title">Новости и акции</h2>
             <div class="news__item  news__item--border">
-                <date class="news__date">29<span>сент</span></date>
+                <date class="news__date  news__date--pos">29<span>сент</span></date>
                 <p class="news__description">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
             </div>
-            <div class="news__item  news__item--border">
-                <date class="news__date">19<span>сент</span></date>
+            <div class="news__item">
+                <date class="news__date  news__date--pos">19<span>сент</span></date>
                 <p class="news__description"> В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!</p>
             </div>
-            <a class="link-item" href="#">Показать все</a>
+            <a class="link-item  link-item--size  link-item--border" href="#">Показать все</a>
         </section>
-        <section class="service-examples  slider  wrapper">
+        <section class="service-examples  service-examples--pos  slider  slider__wrapper">
             <h2 class="service-examples__title">Отзывы о нас</h2>
-              <input class="slider__input" type="radio" name="reviews" id="reviews-slide-1">
+              <input class="slider__input" type="radio" name="reviews" id="reviews-slide-1" checked>
                 <input class="slider__input" type="radio" name="reviews" id="reviews-slide-2">
                 <input class="slider__input" type="radio" name="reviews" id="reviews-slide-3">
                <div class="slider__block">
                      <div class="service-examples__review  slider-text  slider-1">
-                        <img src="" alt="">
-                        <b class="service-examples__client-name">Трэвис Баркер</b>
-                        <p class="service-examples__client-review">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                        <img src="img/client-1-mobile.jpg" width="50" height="49" alt="">
+                        <div class="service-examples__client  service-examples__client--pos">
+                            <b class="service-examples__client-name">Трэвис Баркер</b>
+                            <p class="service-examples__client-review">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                        </div>
                     <!--
                         <button class="reviews__prew" type="button">Предыдущий отзыв</button>
                         <button class="reviews__next" type="button">Следующий отзыв</button>
                     -->
                     </div>
                     <div class="service-examples__review  slider-text  slider-2">
-                        <img src="" alt="">
-                        <b class="service-examples__client-name">Саша Мальцев</b>
-                        <p class="service-examples__client-review">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?</p>
+                        <img src="img/client-1-mobile.jpg" width="50" height="49" alt="">
+                        <div class="service-examples__client  service-examples__client--pos">
+                            <b class="service-examples__client-name">Саша Мальцев</b>
+                            <p class="service-examples__client-review">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?</p>
+                        </div>
                    </div>
                         <div class="service-examples__review  slider-text  slider-3">
-                        <img src="" alt="">
-                        <b class="service-examples__client-name">Лжепётр Мчиславский</b>
-                        <p class="service-examples__client-review">Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</p>
+                        <img src="img/client-1-mobile.jpg" width="50" height="49" alt="">
+                        <div class="service-examples__client  service-examples__client--pos">
+                            <b class="service-examples__client-name">Лжепётр Мчиславский</b>
+                            <p class="service-examples__client-review">Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</p>
+                        </div>
                    </div>
                 </div>
                 <div class="slider__control">
@@ -128,7 +137,7 @@
             </div>
         </section>
     </main>
-    <footer class="page-footer  wrapper">
+    <footer class="page-footer  page-footer__wrapper">
         <div class="page-footer__address">
             <p class="page-footer__address-description">
                 <b>Барбершоп Бородинский</b> <br> г.Санкт-Петербург, ул.Большая Конюшенная, 19/8 <br>
@@ -145,6 +154,22 @@
             <a class="page-footer__developer-name" href="#">Html academy</a>
         </div>
     </footer>
+    <script>
+        var MainNav = document.querySelector ('.nav-menu');
+        var NavButton = document.querySelector ('.nav-menu__header-navigation'); 
+        
+        NavButton.addEventListener('click', function() {
+            if (MainNav.classList.contains('nav-menu--closed')) {
+                MainNav.classList.remove('nav-menu--closed');
+             MainNav.classList.add('nav-menu--opened');
+                }
+            else {
+                MainNav.classList.add('nav-menu--closed');
+                  MainNav.classList.remove('nav-menu--opened');
+                
+            }      
+        });
+    </script>
 </body>
 
 </html>

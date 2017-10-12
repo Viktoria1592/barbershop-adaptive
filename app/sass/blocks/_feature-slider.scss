@@ -1,19 +1,40 @@
-.features-slider {background-color: $background-color-main;
+.features-slider {
+    background-color: $background-color-main;
     color: $color-main;
     min-height: 360px;
+    &--pos {
+        position: relative;
+    }
+    &::after {
+          border-top: 30px solid $background-color-main;
+            border-left: 160px solid transparent;
+            border-right: 160px solid transparent;
+            background-color: transparent;
+            bottom: -30px;
+            left: 0;
+            position: absolute;
+            content: "";
+    }
+    &__item {
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
 
 }
 
-#features-slide-1:checked ~.slider__control label[for="features-slide-1"],
-#features-slide-2:checked ~.slider__control label[for="features-slide-2"],
-#features-slide-3:checked ~.slider__control label[for="features-slide-3"] {background-color: $color-main;
-            border-color: $color-main;
-    
+#features-slide-1:checked ~ .slider__control label[for="features-slide-1"],
+#features-slide-2:checked ~ .slider__control label[for="features-slide-2"],
+#features-slide-3:checked ~ .slider__control label[for="features-slide-3"] {
+    background-color: $color-main;
+    border-color: $color-main;
+
 }
-#features-slide-1:checked ~ slider__block .slider-1,
-#features-slide-2:checked ~ slider__block .slider-2,
-#features-slide-3:checked ~ slider__block .slider-3 {
-//    display: block;
+
+#features-slide-1:checked ~ .slider__block .slider-1,
+#features-slide-2:checked ~ .slider__block .slider-2,
+#features-slide-3:checked ~ .slider__block .slider-3 {
     opacity: 1;
     z-index: 1;
 }

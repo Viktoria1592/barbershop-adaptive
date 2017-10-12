@@ -43,3 +43,6 @@
 //    margin-left: -$size;
 //  }
 //}
+@mixin wrapper {
+    margin: 0 auto;
+}
