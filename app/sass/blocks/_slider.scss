@@ -28,23 +28,11 @@
      &__input {
         display: none;
     }
-    &__advantage {display: block;
-        text-align: center;
-        @extend %heading-1;
-        padding-bottom: 20px;
-    }
-    &__quality {
-        @extend %text;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        padding-bottom: 55px;
-        
-    } 
+    
     &__control {
         position: absolute;
         bottom: 10px;
-        left: 35%;
+        left: 37%;
         z-index: 100;
         
     }

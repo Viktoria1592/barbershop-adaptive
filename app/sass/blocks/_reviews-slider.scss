@@ -1,0 +1,15 @@
+#reviews-slide-1:checked ~.slider__control label[for="reviews-slide-1"],
+#reviews-slide-2:checked ~.slider__control label[for="reviews-slide-2"],
+#reviews-slide-3:checked ~.slider__control label[for="reviews-slide-3"] {
+    background-color: $color-slider;
+            border-color: $color-slider;
+    
+}
+
+#reviews-slide-1:checked ~ .slider__block .slider-1,
+#reviews-slide-2:checked ~ .slider__block .slider-2,
+#reviews-slide-3:checked ~ .slider__block .slider-3 {
+
+    opacity: 1;
+    z-index: 1;
+}

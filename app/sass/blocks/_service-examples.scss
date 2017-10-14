@@ -1,7 +1,11 @@
 .service-examples {
     padding-top: 30px;
+    min-height: 285px;
+    padding-bottom: 40px;
+    
     &--pos {
         position: relative;
+        z-index: 100;
     }
      &::after {
           border-top: 30px solid $color-main;
@@ -29,6 +33,47 @@
             
         }
     }
+    &__best-work {
+        @extend %text;
+        text-transform: uppercase;
+        font-weight: 700;
+        @include screen('tablet', max) {
+            padding: 15px 15px 15px 26px;
+        }
+        
+        &--pos {
+            position: absolute;
+            left: 20px;
+            top: 400px;
+            
+        }
+        
+        &--color {
+            color: $color-main;
+            background-color: $color-menu;
+        }
+        &::after,
+        &::before {
+            @include pseudo;
+        }
+        &::before {
+
+            border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 45px solid $color-menu;
+            top: 0px;
+            right: -10px;
+        }
+        &::after {
+
+            border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 45px solid $color-menu;
+            bottom: 0px;
+            right: -10px;
+        }
+        
+    }
     &__title {
         @extend %heading-1;
         padding: 0;
@@ -40,25 +85,59 @@
         @extend %heading-2;
         padding-bottom: 15px;
         display: block;
+        &--pos {
+            text-align: center;
+        }
         
     }
     &__client-review {
         margin: 0;
          padding: 0;
         padding-bottom: 58px;
+        &--pos {
+            padding-bottom: 25px;
+            
+        }
         
     }
     &__review {
     display: flex;
         justify-content: space-between;
-        & img {
-            width: 50px;
-            height: 49px;
+        
+        
+        &--pos {
+            flex-direction: column;
+            position: relative;
+        }
+        &--border { 
+            border: 1px solid #e5ddd5;
+            
         }
     }
     &__client {
         &--pos {
             margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    &__image {
+        &--pos {
+            margin: 0 auto;
+            margin-bottom: 22px;
+        }
+    }
+    &__service-name {
+        padding-bottom: 30px;
+        &--pos {
+            margin-left: 40px;
+        }
+       
+        
+        & span {
+            @extend %text-small;
+            text-transform: uppercase;
+             padding-left: 40px;
+            margin-right: 35px;
         }
     }
 }

@@ -21,5 +21,12 @@
             
         }
     }
+    &__logo {
+        & img {
+            display: block;
+            margin: 0 auto;
+            min-height: 85px;
+        }
+    }
     
 }

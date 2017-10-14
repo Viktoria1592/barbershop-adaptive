@@ -66,38 +66,18 @@
 
         }
         &::after {
-
+            @include pseudo;
             border-top: 15px solid $color-base;
             border-left: 25px solid transparent;
             border-right: 25px solid transparent;
             background-color: transparent;
             bottom: -15px;
             left: 0;
-            position: absolute;
-            content: "";
+            
 
 
 
         }
 
     }
-}
-
-.link-item {
-    @extend %links;
-    color: $color-base;
-    text-transform: uppercase;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    &--size {
-        padding-top: 18px;
-        padding-bottom: 18px;
-    }
-    &--border {
-        border: 1px solid #e5ddd5;
-
-    }
-
-
 }

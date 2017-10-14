@@ -1,5 +1,6 @@
 .page-footer {
     background-color: #292929;
+    padding-bottom: 20px;
     
     &__wrapper {
         @include wrapper;
@@ -20,10 +21,12 @@
     
     &__address {text-align: center;
         padding-top: 70px;
+         color: $color-main;
         &-description {
-            padding: 0;
-            margin: 0;
-            color: $color-main;
+           display: block;
+            width: 210px;
+            margin: 0 auto;
+            padding-bottom: 23px;
             
         }
         
@@ -33,7 +36,7 @@
          
         
     }
-     &__developers {text-align: center;
+     &__developer {text-align: center;
          & span {color: $color-main;
              
          }
@@ -43,5 +46,14 @@
     &__developer-name {
         @extend %links;
         text-transform: uppercase;
+    }
+    &__name {
+        padding-bottom: 20px;
+        font-weight: 700;
+        display: block;
+    }
+    &__developer-item {
+        padding-bottom: 15px;
+        display: block;
     }
 }

@@ -1,0 +1,109 @@
+.prices {
+    
+    &__wrapper {
+        @include wrapper;
+        width: 320px;
+        @media (min-width: 768px) and (max-width: 1200px) {
+            width: 640px;
+            padding-left: 65px;
+            padding-right: 65px;
+        }
+        @media (min-width:1200px) {
+            width: 960px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+    &--color {
+        background-color: $color-slider;
+        color: $color-main;
+    }
+    &__title {
+        padding-top: 67px;
+        @extend %heading-1;
+        text-align: center;
+        padding-bottom: 33px;
+    }
+    &--pos {
+        position: relative;
+    }
+    &::after {
+        border-top: 30px solid $color-slider;
+        border-left: 160px solid transparent;
+        border-right: 160px solid transparent;
+        background-color: transparent;
+        bottom: -30px;
+        left: 0;
+        position: absolute;
+        content: "";
+    }
+
+    &__price-sales {
+        padding-bottom: 15px;
+        display: flex;
+    
+        
+        @include screen('tablet', max) {
+                padding-left: 20px;
+            padding-top: 14px;
+            }
+        
+        &--pos {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        &--border-gray {
+            
+        border: 1px solid #3e3e3e;
+        }
+    }
+    
+    &__price-point {
+        padding-bottom: 17px;
+        
+        @include screen('tablet', max) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    &__price-item {
+        padding-left: 20px;
+     
+        &--number {
+            @include screen('tablet', max) {
+                display: none;
+            }
+        }
+        &--weight {
+            font-weight: 700;
+            @include screen('tablet', max) {
+                flex-basis: 180px;
+            }
+        }
+        
+        &--order {
+            @include screen ('tablet', max) {
+                order: 4;
+            } 
+        }
+        &--cost {
+            @include screen ('tablet', max) {
+                padding-right: 20px;
+            }
+        }
+    }
+    
+    &__price-hours {
+        padding: 0;
+        margin: 0;
+        
+        @include screen ('tablet', max) {
+                padding-left: 30px;
+            
+            }
+        
+    }
+    
+}

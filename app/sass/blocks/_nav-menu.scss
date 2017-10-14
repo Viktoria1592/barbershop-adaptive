@@ -14,7 +14,7 @@
             cursor: pointer;
         }
         &--bg-color {
-            background-color: #6a4d38;
+            background-color: $color-menu-opened;
         }
         &--pos {
             position: absolute;
@@ -25,7 +25,7 @@
      
     }
     &__menu-list {
-        &--bg-color {background-color: #826550;}
+        &--bg-color {background-color: $color-menu;}
 
         
     }
@@ -138,8 +138,8 @@
     right: 0;
     left: 70px;
     height: 80vh;
-    background-color: #6a4d38;
-    z-index: 20;
+    background-color: $color-menu-opened;
+    z-index: 120;
     
 	
 }
