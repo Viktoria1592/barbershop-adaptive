@@ -1,27 +1,35 @@
 .page-header {
     color: $color-main;
+    @include screen ("tablet") {
+        display: flex;
+         flex-wrap: wrap;
+    }
     &--color {
         background-color: $color-base;
+        @include screen ("tablet") {
+            background: url(../../img/back-tablet.jpg) center no-repeat;
+            background-size: cover;
+        }
         @media (max-width:767px) {
         background-color:$background-color-main;}
     }
     &__wrapper {
-        @include wrapper;
+        @include screen ("tablet", max) {
+            @include wrapper;
         width: 320px;
-        @media (min-width:768px) and (max-width:1200px)
-        {
-            width: 640px;
-            padding-left: 65px;
-            padding-right: 65px;
-        }
-        @media (min-width:1200px) {
-            width: 960px;
-            padding-left: 120px;
-            padding-right: 120px;
             
         }
+
     }
     &__logo {
+        margin: 0 auto;
+        @include screen ("tablet") {
+            order: 3;
+            min-height: 400px;
+        }
+        @include screen ("desktop") {
+            min-height: 650px;
+        }
         & img {
             display: block;
             margin: 0 auto;

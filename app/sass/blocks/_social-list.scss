@@ -10,24 +10,8 @@
         display: inline-block;
         border: 1px solid #3e3e3e;
         
-        &--pos {
-            position: relative;
-                height: 100px;
-        }
-        &::before {
-            @include pseudo;
-            top: 50%;
-            left: 50%;
-            
-        }
-        &--vk {
-            width: 108px;
-        }
-        &--fb {
-            width: 98px;
-        }
-        &--tw {
-            width: 108px;
+        &:active::before {
+           opacity: 0.3; 
         }
         
         &--border-gray {
@@ -46,6 +30,49 @@
             border: 1px solid #252525;
         }
     }
+        &--pos {
+            position: relative;
+                height: 100px;
+        }
+        &::before {
+            @include pseudo;
+            top: 40%;
+            left: 35%;
+            background: url(../../img/sprites.png) no-repeat;
+            
+        }
+        &--vk {
+            width: 108px;
+            
+            &::before {
+                background-position: -6px -10px;
+                width: 23px;
+                height: 26px;
+                left: 40%;
+                top: 45%;
+            }
+        }
+        &--fb {
+            width: 98px;
+            
+            &::before {
+                background-position: -7px -105px;
+                width: 18px;
+                height: 39px;
+                left: 40%;
+            }
+        }
+        &--inst {
+            width: 108px;
+            
+            &::before {
+                background-position: -7px -58px;
+                width: 36px;
+                height: 36px;
+            }
+        }
+        
+  
         
     }
 }

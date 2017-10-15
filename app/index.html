@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
-    <header class="page-header  page-header--color   page-header__wrapper">
+    <header class="page-header  page-header__wrapper  page-header--color">
 <h2 class="page-header__title  visually-hidden">Барбершоп Бородинский</h2>
         <div class="page-header__logo">
             <img src="img/logotype-mobile.svg" width="230" height="40" alt="Логотип">
         </div>
-        <nav class="nav-menu nav-menu--pos   nav-menu--closed">
+        <nav class="nav-menu nav-menu--pos  nav-menu--color   nav-menu--closed">
           <button class="nav-menu__header-navigation  nav-menu__header-navigation--bg-color  nav-menu__header-navigation--pos" type="button"></button>
             <div class="nav-menu__wrapper">
                 <ul class="nav-menu__menu-list  nav-menu__menu-list--bg-color">
-                    <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a href="">Главная</a></li>
-                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="photo.html">Наши работы</a></li>
-                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="form.html">Записаться</a></li>
-                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#">Контакты</a></li>
-                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#">Html academy</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a href="" class="nav-menu__menu-link  nav-menu__menu-link--pos">Главная</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="photo.html" class="nav-menu__menu-link">Наши работы</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="form.html" class="nav-menu__menu-link">Записаться</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Контакты</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Html academy</a></li>
                     
                 </ul>
                 <div class="nav-menu__entry">
@@ -31,9 +31,10 @@
     <main>
         <section class="features  features__wrapper">
             <h2 class="features__title  visually-hidden">Наши преимущества</h2>
-            <div class="features-text  features-text--border">
+            <div class="features-text  features-text--border  features-text--pos  features-text--color">
                 <b class="features-text__advantage">Стрижка у нас это выгодно!</b>
                 <p class="features-text__description">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+                <span class="features-stats__false  features-stats__false--top"> <sup>*</sup>- приведенные данные ложь</span>
             </div>
             <ul class="features-stats">
                 <li class="features-stats__item  features-stats__item--color-1">
@@ -44,16 +45,16 @@
                     <b class="features-stats__number">7200</b>
                     <span class="features-stats__text">секунд времени мастера</span>
                 </li>
-                <li class="features-stats__item  features-stats__item--color-1">
+                <li class="features-stats__item  features-stats__item--color-3">
                     <b class="features-stats__number">90 000</b>
                     <span class="features-stats__text">постриженных волос</span>
                 </li>
-                <li class="features-stats__item  features-stats__item--color-2">
+                <li class="features-stats__item  features-stats__item--color-1">
                     <b class="features-stats__number">500 000<sup>*</sup></b>
                     <span class="features-stats__text">лайков и комплиментов</span>
                 </li>
-            <li class="features-stats__item  features-stats__item--color-3">
-                <span class="features-stats__false"> <sup>*</sup>- приведенные данные ложь</span>
+            <li class="features-stats__item  features-stats__item--color-4">
+                <span class="features-stats__false  features-stats__false--bottom"> <sup>*</sup>- приведенные данные ложь</span>
             </li>
              </ul>
             </section>
@@ -143,9 +144,9 @@
                 <a class="page-footer__telephone  link-item  link-item--color-white  link-item--size-small  link-item--border-gray  link-item--active-black" href="tel:+7812555666666">+7(812) 555-66-66</a>
         </div>
         <div class="social-list  social-list--pos">
-            <a class="social-list__item  social-list__item--pos  social-list-item--border-gray  social-list-item--active-black  social-list__item--vk" href="#">Вконтакте</a>
-            <a class="social-list__item  social-list__item--pos  social-list__item--fb" href="#">Фейсбук</a>
-            <a class="social-list__item  social-list__item--pos  social-list__item--tw" href="#">Инстаграм</a>
+            <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--vk" href="#">Вконтакте</a>
+            <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Фейсбук</a>
+            <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--inst" href="#">Инстаграм</a>
         </div>
         <div class="page-footer__developer">
             <span class="page-footer__developer-item">Разработано:</span>

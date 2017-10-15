@@ -1,0 +1,34 @@
+.entry-color-brown, .entry-opacity-1, .facebook-copy, .insta-icon-big, .vk-icon-big{
+	background: url(sprites.png) no-repeat;
+}
+
+.entry-color-brown{
+	background-position: 0 -178px ;
+	width: 16px;
+	height: 16px;
+}
+
+.entry-opacity-1{
+	background-position: 0 -153px ;
+	width: 16px;
+	height: 16px;
+}
+
+.facebook-copy{
+	background-position: -7px -105px ;
+	width: 18px;
+	height: 39px;
+}
+
+.insta-icon-big{
+	background-position: -7px -58px ;
+	width: 36px;
+	height: 36px;
+}
+
+.vk-icon-big{
+	background-position: -6px -10px ;
+	width: 23px;
+	height: 26px;
+}
+

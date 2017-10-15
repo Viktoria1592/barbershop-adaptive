@@ -1,29 +1,58 @@
 .features {
+      @include screen ("desktop") {
+      
+        display: flex;
+    }
+    
+    
+  
    &__wrapper {
         @include wrapper;
         width: 320px;
         @media (min-width:768px) and (max-width:1200px)
         {
             width: 640px;
-            padding-left: 65px;
-            padding-right: 65px;
+
         }
         @media (min-width:1200px) {
             width: 960px;
-            padding-left: 120px;
-            padding-right: 120px;
+            margin-top: -163px;
             
         }
     }
 }
     .features-text {
+          @media (min-width:768px) and (max-width:1199px) {
+      
+        display: flex;
+              flex-wrap: wrap;
+        }
+              @include screen ("desktop") {
+                  width: 320px;
+                  box-sizing: border-box;
+              }
+    
+
     &__advantage {
         @extend %heading-1;
         display: block;
         text-align: center;
         padding-bottom: 25px;
         padding-top: 32px;
+        
+        @include screen ("tablet") {
+            font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+            text-transform: inherit;
+            width: 40%;
+            padding-left: 40px;
+            box-sizing: border-box;
+            text-align: left;
+            
+        }
     }
+        
     &__description {
         @extend %text;
         padding: 0;
@@ -32,18 +61,52 @@
         padding-right: 35px;
         margin: 0;
         text-align: center;
+        @include screen ("tablet") {
+            width: 50%;
+            box-sizing: border-box;
+            flex-grow: 1;
+            text-align: left;
+            padding-left: 89px;
+            padding-top: 39px;
+        }
     }
     &--border {
+        @include screen ("tablet", max) {
         border-bottom: 8px solid $background-color-main;
     }
+        }
+        &--pos {
+            @media (min-width:768px) and (max-width:1199px) {
+                margin-top: -194px;
+            }
+        }
+        &--color {
+            background-color: $color-main;
+        }
 }
 
 .features-stats {
+    @include screen ("tablet") {
+       
+        display: flex;
+        flex-wrap: wrap;
+    }
     &__item {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 9px 0 9px 20px;
+        @include screen ("tablet") {
+            width: 50%;
+            box-sizing: border-box;
+            flex-direction: column;
+            padding-top: 30px;
+            padding-left: 33px;
+            align-items: stretch;
+            line-height: 1.15;
+        }
+       
+        
         &--color-1 {
             background-color: #404040;
         }
@@ -51,7 +114,15 @@
             background-color: #4e4e4e;
         }
         &--color-3 {
+            background-color: $color-slider;
+        }
+        &--color-4 {
+             
             background-color: $background-color-main;
+        
+            @include screen ("tablet") {
+                display: none;
+            }
         }
         &--pos {
             padding: 0;
@@ -61,15 +132,41 @@
         color: #7b7b7b;
         @extend %text;
         margin: 0 auto;
+        &--top {
+            @include screen ("tablet", max) {
+                display: none;
+            }
+            @include screen ("tablet") {
+                width: 50%;
+                margin: 0;
+                padding-left: 40px;
+                padding-bottom: 30px;
+            }
+        }
+            &--bottom {
+                @include screen ("tablet") {
+                display: none;
+            }
+            }
+        
     }
     &__number {
         color: $color-main;
         @extend %text-big;
+        @include screen ("tablet") {
+            font-size: 72px;
+            line-height: 1.15;
+        }
     }
     &__text {
         color: $color-main;
         padding-right: 20px;
-        flex-basis: 110px;
+        width: 110px;
         text-align: right;
+        @include screen ("tablet") {
+            text-align: left;
+            padding-bottom: 22px;
+            width: 200px;
+        }
     }
 }
