@@ -1,12 +1,49 @@
 .service-examples {
     padding-top: 30px;
-    min-height: 285px;
     padding-bottom: 40px;
+    @include screen ("tablet") {
+        padding-top: 46px;
+        box-sizing: border-box;
+       
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+       
+    }
+    &--photo {
+        @include screen ("tablet") {
+            padding-top: 60px;
+        }
+    }
+  
+    
+    &__block {
+        width: 100%;
+        min-height: 155px;
+        @include screen ("tablet") {
+            padding-left: 80px;
+            padding-top: 35px;
+            min-height: 120px;
+           
+        }
+        @include screen ("desktop") {
+            padding-left: 70px;
+            
+        }
+        &--border {
+            @include screen ("tablet") {
+             border-bottom: 1px solid #e5ddd5;
+             border-top: 1px solid #e5ddd5;
+        }
+        }
+    }
     
     &--pos {
         position: relative;
         z-index: 100;
     }
+    @include screen ("tablet", max) {
      &::after {
           border-top: 30px solid $color-main;
             border-left: 160px solid transparent;
@@ -14,8 +51,8 @@
             background-color: transparent;
             bottom: -30px;
             left: 0;
-            position: absolute;
-            content: "";
+            @include pseudo;
+    }
     }
     &__wrapper {
         @include wrapper;
@@ -23,13 +60,13 @@
         @media (min-width:768px) and (max-width:1200px)
         {
             width: 640px;
-            padding-left: 65px;
-            padding-right: 65px;
+//            padding-left: 65px;
+//            padding-right: 65px;
         }
         @media (min-width:1200px) {
             width: 960px;
-            padding-left: 120px;
-            padding-right: 120px;
+//            padding-left: 120px;
+//            padding-right: 120px;
             
         }
     }
@@ -37,14 +74,24 @@
         @extend %text;
         text-transform: uppercase;
         font-weight: 700;
-        @include screen('tablet', max) {
             padding: 15px 15px 15px 26px;
-        }
+        
         
         &--pos {
             position: absolute;
-            left: 20px;
+            @include screen ("tablet", max) {
+                left: 20px;
             top: 400px;
+            }
+            @media (min-width:768px) and (max-width:1199px) {
+                 left: 0;
+                top: 40px;
+            } 
+          
+            @include screen ("desktop") {
+                right: 0;
+                top: 25px;
+            }
             
         }
         
@@ -52,6 +99,7 @@
             color: $color-main;
             background-color: $color-menu;
         }
+        
         &::after,
         &::before {
             @include pseudo;
@@ -62,7 +110,12 @@
     border-right: 15px solid transparent;
     border-top: 45px solid $color-menu;
             top: 0px;
+            @include screen ("desktop", max) {
             right: -10px;
+            }
+            @include screen ("desktop") {
+                left: -10px;
+            }
         }
         &::after {
 
@@ -70,23 +123,59 @@
     border-right: 15px solid transparent;
     border-bottom: 45px solid $color-menu;
             bottom: 0px;
+            @include screen ("desktop", max) {
             right: -10px;
+            }
+             @include screen ("desktop") {
+                left: -10px;
+            }
         }
         
     }
+    
     &__title {
         @extend %heading-1;
         padding: 0;
         margin: 0;
         text-align: center;
         padding-bottom: 35px;
+        
+        @include screen ("tablet") {
+            
+             font-size: 40px;
+    line-height: 1.15;
+    font-weight: 700;
+            width: 50%;
+            text-align: left;
+        }
+        &--photo {
+            @include screen ("tablet") {
+                padding-bottom: 50px;
+            }
+             @include screen ("desktop") {
+                padding-bottom: 88px;
+            }
+        }
     }
     &__client-name {
         @extend %heading-2;
         padding-bottom: 15px;
         display: block;
+        
+        
         &--pos {
+            @include screen ("tablet", max) {
             text-align: center;
+        }
+        }
+        &-photo {
+            @include screen ("tablet") {
+                padding-top: 45px;
+                padding-bottom: 30px;
+            }
+            @include screen ("desktop") {
+                padding-top: 35px;
+            }
         }
         
     }
@@ -94,6 +183,10 @@
         margin: 0;
          padding: 0;
         padding-bottom: 58px;
+        @include screen ("tablet") {
+            padding-bottom: 35px;
+            padding-right: 50px;
+        }
         &--pos {
             padding-bottom: 25px;
             
@@ -103,33 +196,130 @@
     &__review {
     display: flex;
         justify-content: space-between;
+
+        transition: all 0.2s linear;
+        
+        &--slider {
+           position: absolute;
+        z-index: 0;
+        opacity: 0; 
+        }
         
         
         &--pos {
+             position: relative;
             flex-direction: column;
-            position: relative;
+            @include screen ("desktop", max) {
+
+            }
+            
         }
         &--border { 
             border: 1px solid #e5ddd5;
             
         }
+        &-prew,
+        &-next {
+            @include screen ("tablet", max) {
+                display: none;
+            }
+            font-size: 0;
+            position: absolute;
+            width: 50px;
+            height: 100%;
+            border: 0;
+            outline: 0;
+            top: 0;
+            cursor: pointer;
+            z-index: 300;
+        }
+        &-prew {
+            left: 0;
+            &::before {
+                @include pseudo;
+                @include triangle (black, left, 9px);
+                left: 60%;
+                
+            }
+            &--color {
+                background-color: transparent;
+                border: 1px solid #e5ddd5;
+            }
+            
+        }
+        &-next {
+            right: 0;
+            &::before {
+                @include pseudo;
+                @include triangle (black, right, 9px);
+                right: 60%;
+            }
+            &--color {
+                background-color: transparent;
+                border: 1px solid #e5ddd5;
+            }
+            
+            
+        }
+        &--photo {
+            @include screen ("tablet") {
+            margin-bottom: 40px;
+                width: 100%;
+               
+        }
+                @include screen ("desktop") {
+                width: 33.333%;
+            }
+                    &-big {
+                        width: 100%;
+                        @include screen ("desktop") {
+                            flex-direction: row;
+                        }
+                    }
+            @media (min-width:768px) and (max-width:1199px) {
+                flex-direction: row;
+            }
+               
+        }
+        
     }
     &__client {
         &--pos {
             margin-left: 20px;
             margin-right: 20px;
+            @include screen ("tablet") {
+                margin-left: 26px;
+            }
+             @include screen ("desktop") {
+                margin-left: 70px;
+            }
+        }
+        &-item {
+            @include screen ("tablet") {
+                padding-left: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            @include screen ("desktop") {
+                padding-left: 35px;
+            }
         }
     }
     &__image {
         &--pos {
-            margin: 0 auto;
+            @include screen ("tablet", max) {
             margin-bottom: 22px;
+                margin: 0 auto;
         }
+    }
     }
     &__service-name {
         padding-bottom: 30px;
         &--pos {
+            
             margin-left: 40px;
+        
         }
        
         
@@ -138,6 +328,16 @@
             text-transform: uppercase;
              padding-left: 40px;
             margin-right: 35px;
+        }
+    }
+    &__button {
+        @include screen ("tablet", max) {
+            display: none;
+        }
+        
+        @include screen ("tablet") {
+            padding: 6px 30px;
+           
         }
     }
 }

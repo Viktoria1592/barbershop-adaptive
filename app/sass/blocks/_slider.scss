@@ -6,25 +6,25 @@
         @media (min-width:768px) and (max-width:1200px)
         {
             width: 640px;
-            padding-left: 65px;
-            padding-right: 65px;
+//            padding-left: 65px;
+//            padding-right: 65px;
         }
         @media (min-width:1200px) {
             width: 960px;
-            padding-left: 120px;
-            padding-right: 120px;
+//            padding-left: 120px;
+//            padding-right: 120px;
             
         }
     }
     &__block {position: relative;
         
     }
-    &-text {position: absolute;
-        z-index: 0;
-        opacity: 0;
-        transition: all 0.2s linear;
-        
-    }
+//    &-text {position: absolute;
+//        z-index: 0;
+//        opacity: 0;
+//        transition: all 0.2s linear;
+//        
+//    }
      &__input {
         display: none;
     }
@@ -71,3 +71,11 @@
         
     }
 }
+//.slider-1,
+//.slider-2,
+//.slider-3 {
+//    
+// z-index: 0;
+//opacity: 0;	
+//position: absolute;
+//}

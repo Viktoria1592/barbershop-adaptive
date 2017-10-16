@@ -1,22 +1,82 @@
 .features-slider {
     background-color: $background-color-main;
     color: $color-main;
-    min-height: 360px;
     padding-top: 30px;
+    @include screen ("tablet", max) {
+        min-height: 360px;
+    }
+    @include screen ("tablet") {
+        padding-top: 0px;
+    }
+    @include screen ("desktop") {
+        padding-top: 73px;
+    }
+    &__block {
+        @include screen ("tablet") {
+         
+            display: flex;
+        }
+        @media (min-width:768px) and (max-width:1199px) {
+            flex-direction: column;
+        }
+    }
+    &__description {
+        @media (min-width:768px) and (max-width:1199px) {
+            padding-left: 35px;
+        }
+    }
     &--pos {
         position: relative;
     }
     &::after {
+        @include pseudo;
           border-top: 30px solid $background-color-main;
             border-left: 160px solid transparent;
             border-right: 160px solid transparent;
             background-color: transparent;
             bottom: -30px;
             left: 0;
-            position: absolute;
-            content: "";
+        
+         @include screen ("desktop") {
+            border-top: 60px solid $background-color-main;
+            border-left: 480px solid transparent;
+            border-right: 480px solid transparent;
+            bottom: -60px;
+        }
+        @media (min-width:768px) and (max-width:1199px) {
+           border-top: 42px solid $background-color-main;
+            border-left: 320px solid transparent;
+            border-right: 320px solid transparent;
+            bottom: -42px; 
+        }
+            
     }
     &__item {
+        @include screen ("tablet", max) {
+        position: absolute;
+        z-index: 0;
+        opacity: 0;
+        transition: all 0.2s linear;
+        }
+        @include screen ("tablet")
+        {
+            
+
+            
+            padding-left: 28px;
+        }
+        @include screen ("desktop") {
+            padding-left: 43px;
+
+        }
+        @media (min-width:768px) and (max-width:1199px) {
+            
+            display: flex;
+            padding-top: 43px;
+            
+        }
+        
+    
         img {
             width: 100px;
             height: 100px;
@@ -30,6 +90,10 @@
         @extend %heading-1;
         padding-bottom: 20px;
        padding-top: 25px;
+       @media (min-width:768px) and (max-width:1199px) {
+           padding-top: 0;
+           text-align: left;
+       }
     }
     &__quality {
         @extend %text;
@@ -37,8 +101,23 @@
         padding: 0;
         text-align: center;
         padding-bottom: 55px;
+        @include screen ("tablet") {
+            padding-bottom: 43px;
+        }
+        @media (min-width:768px) and (max-width:1199px) {
+            text-align: left;
+            padding-right: 30px;
+        }
+        @include screen ("desktop") {
+            padding-right: 39px;
+        }
         
     }  
+    &__control {
+        @include screen ("tablet") {
+            display: none;
+        }
+    }
 
 }
 

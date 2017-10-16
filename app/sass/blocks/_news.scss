@@ -1,16 +1,31 @@
 .news {
+    padding-top: 65px;
+    @include screen ("tablet") {
+       
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 93px;
+        align-items: flex-start;
+        
+    }
+    @include screen ("desktop") {
+            padding-top: 123px;
+        }
     &__wrapper {
         @include wrapper;
         width: 320px;
-        @media (min-width: 768px) and (max-width:1200px) {
+        @include screen ("tablet")
+         {
             width: 640px;
-            padding-left: 65px;
-            padding-right: 65px;
+//            padding-left: 65px;
+//            padding-right: 65px;
         }
-        @media (min-width:1200px) {
+        @include screen ("desktop")
+        {
             width: 960px;
-            padding-left: 120px;
-            padding-right: 120px;
+//            padding-left: 120px;
+//            padding-right: 120px;
 
         }
     }
@@ -19,8 +34,21 @@
         margin: 0;
         padding: 0;
         text-align: center;
-        padding-top: 65px;
+        
         padding-bottom: 15px;
+        @include screen ("tablet") {
+            
+             font-size: 40px;
+    line-height: 1.15;
+    font-weight: 700;
+            width: 50%;
+            text-align: left;
+        }
+        @include screen ("desktop") {
+            padding-left: 70px;
+        }
+        
+       
 
 
     }
@@ -28,6 +56,9 @@
         padding: 0;
         margin: 0;
         flex-basis: 215px;
+        @include screen ("tablet") {
+            padding-left: 20px;
+        }
        
 
 
@@ -35,11 +66,21 @@
     &__item {
 
         display: flex;
-        justify-content: space-between;
         padding-bottom: 20px;
         padding-top: 20px;
+        @include screen ("tablet", max) {
+         justify-content: space-between;   
+        }
+        @include screen ("tablet") {
+            order: 4;
+            width: 50%;
+            padding-bottom: 37px;
+            padding-top: 45px;
+        }
         &--border {
+            @include screen ("tablet", max) {
             border-bottom: 1px solid #e5ddd5;
+            }
         }
     }
     &__date {
@@ -52,6 +93,7 @@
         padding-top: 10px;
         padding-left: 10px;
         padding-right: 10px;
+        text-align: center;
         &--pos {
             position: relative;
         }
@@ -79,5 +121,16 @@
 
         }
 
+    }
+    &__button {
+        @include screen ("tablet") {
+            padding: 6px 30px;
+           
+        }
+    }
+    &--border {
+        @include screen ("tablet") {
+            border-bottom: 1px solid #e5ddd5;
+        }
     }
 }

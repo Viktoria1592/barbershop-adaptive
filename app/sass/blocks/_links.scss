@@ -2,8 +2,19 @@
     @extend %links;
     text-transform: uppercase;
     text-align: center;
-    display: block;
-    margin: 0 20px;
+   
+    
+ 
+    &--type-block {
+        display: block;
+    }
+    &--pos {
+        
+        @include screen ("tablet", max) {
+            margin: 0 20px;  
+        }
+       
+    }
     &--color-black {
         color: $color-base;
         &:active {
@@ -18,8 +29,10 @@
         }
     }
     &--size-big {
-        padding-top: 18px;
-        padding-bottom: 18px;
+        @include screen ("tablet", max) {
+          padding-top: 18px;
+        padding-bottom: 18px;  
+        }
     }
      &--size-small {
         padding-top: 15px;
