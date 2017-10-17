@@ -1,17 +1,59 @@
 .prices {
+    &__block {
+       padding-bottom: 17px;
+    @include screen ("tablet") {
+        padding-bottom: 52px;
+    }
     
+    @include screen ("desktop") {
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 84px;
+    } 
+          &::after {
+        @include screen('tablet', max) {
+        border-top: 30px solid $color-slider;
+        border-left: 160px solid transparent;
+        border-right: 160px solid transparent;
+        background-color: transparent;
+        bottom: -30px;
+        left: 0;
+        position: absolute;
+        content: "";
+    }
+    }
+    }
     &__wrapper {
         @include wrapper;
         width: 320px;
         @media (min-width: 768px) and (max-width: 1200px) {
             width: 640px;
-            padding-left: 65px;
-            padding-right: 65px;
+//            padding-left: 65px;
+//            padding-right: 65px;
         }
         @media (min-width:1200px) {
             width: 960px;
-            padding-left: 120px;
-            padding-right: 120px;
+//            padding-left: 120px;
+//            padding-right: 120px;
+        }
+    }
+    &__price-list {
+        @media (min-width:768px) and (max-width:1199px) {
+        width: 100%;
+    }
+        @include screen ("tablet") {
+           border-collapse: collapse; 
+        }
+        @include screen ("desktop") {
+            width: 66.66%;
+        }
+        
+        &--pos {
+            @media (min-width:768px) and (max-width:1199px) {
+            margin-bottom: 10px;
+        }
         }
     }
     &--color {
@@ -23,21 +65,19 @@
         @extend %heading-1;
         text-align: center;
         padding-bottom: 33px;
+        width: 100%;
+        @include screen ("tablet") {
+            padding-top: 82px;
+            text-align: left;
+            font-size: 40px;
+    line-height: 1.15;
+    font-weight: 700;
+            padding-bottom: 50px;
+        }
     }
     &--pos {
         position: relative;
     }
-    &::after {
-        border-top: 30px solid $color-slider;
-        border-left: 160px solid transparent;
-        border-right: 160px solid transparent;
-        background-color: transparent;
-        bottom: -30px;
-        left: 0;
-        position: absolute;
-        content: "";
-    }
-
     &__price-sales {
         padding-bottom: 15px;
         display: flex;
@@ -47,10 +87,24 @@
                 padding-left: 20px;
             padding-top: 14px;
             }
+        @media (min-width:768px) and (max-width:1199px) {
+            padding-left: 25px;
+            padding-top: 15px;
+            align-items: center;
+        }
+        @include screen('desktop') {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 270px;
+        }
+       
         
         &--pos {
+            @include screen('tablet', max) {
             margin-left: 20px;
             margin-right: 20px;
+        }
         }
         
         &--border-gray {
@@ -67,14 +121,26 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
+        @include screen ("tablet") {
+
+        }
     }
     &__price-item {
         padding-left: 20px;
+        @include screen ("tablet") {
+            border: 1px solid #3e3e3e;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
      
         &--number {
             @include screen('tablet', max) {
                 display: none;
             }
+            @include screen('tablet') {
+                color: #727272;
+            }
+            
         }
         &--weight {
             font-weight: 700;
@@ -103,6 +169,26 @@
                 padding-left: 30px;
             
             }
+        @media (min-width:768px) and (max-width:1199px) {
+            
+          font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase; 
+            width: 370px;
+            padding-left: 78px;
+        }
+        @include screen('desktop') {
+            text-align: center;
+            padding-top: 25px;
+        }
+        
+        br {
+            @media (min-width:768px) and (max-width:1199px) {
+                display: none;
+            }
+            
+        }
         
     }
     

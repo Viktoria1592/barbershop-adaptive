@@ -1,5 +1,6 @@
 .news {
-    padding-top: 65px;
+    &__main {
+          padding-top: 65px;
     @include screen ("tablet") {
        
         display: flex;
@@ -12,6 +13,8 @@
     @include screen ("desktop") {
             padding-top: 123px;
         }
+    }
+    
     &__wrapper {
         @include wrapper;
         width: 320px;
@@ -52,6 +55,17 @@
 
 
     }
+    &__block {
+        @include screen ("tablet", max) {
+            max-height: 316px;
+            overflow-y: hidden;
+        }
+        @include screen ("tablet") {
+            order: 4;
+            display: flex;
+            overflow-x: hidden;
+        }
+    }
     &__description {
         padding: 0;
         margin: 0;
@@ -72,10 +86,13 @@
          justify-content: space-between;   
         }
         @include screen ("tablet") {
-            order: 4;
             width: 50%;
             padding-bottom: 37px;
             padding-top: 45px;
+            flex-shrink: 0;
+        }
+        @include screen ("desktop") {
+            width: 33.3333%;
         }
         &--border {
             @include screen ("tablet", max) {
@@ -132,5 +149,8 @@
         @include screen ("tablet") {
             border-bottom: 1px solid #e5ddd5;
         }
+    }
+    &--color {
+        background-color: $color-main;
     }
 }

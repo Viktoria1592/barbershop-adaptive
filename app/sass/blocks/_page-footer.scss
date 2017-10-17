@@ -1,7 +1,15 @@
 .page-footer {
     background-color: #292929;
+    &__block {
     padding-bottom: 20px;
     
+    @include screen ("tablet") {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 55px;
+    }
+    }
     &__wrapper {
         @include wrapper;
         width: 320px;
@@ -19,24 +27,69 @@
         }
     }
     
-    &__address {text-align: center;
+    &__address {
+        text-align: center;
         padding-top: 70px;
          color: $color-main;
+        
+        @include screen ("tablet") {
+            width: 330px;
+            text-align: left;
+            padding-top: 53px;
+        }
+        
         &-description {
            display: block;
-            width: 210px;
-            margin: 0 auto;
+            @include screen ("tablet", max) {
+              width: 210px;
+            margin: 0 auto; 
             padding-bottom: 23px;
+            }
+           
             
         }
         
     }
     
      &__telephone {@extend %links;
+         text-transform: uppercase;
+          color: $color-main;
+         
+         @include screen ("tablet", max) {
+          padding-top: 15px;
+        padding-bottom: 15px;
+             text-align: center;
+             display: block;
+             
+             &--active-black {
+        &:active {
+        background-color: #252525;
+            border: 1px solid #252525;
+        }
+    }
+             &--pos {
+                 margin: 0 20px; 
+             }
+              &--color-white {
+        
+        &:active {
+            color: #6c6c6c;
+        }
+         }
+         
+         &--border {
+             @include screen ("tablet", max) {
+             border: 1px solid #3e3e3e;
+         }
+         }
          
         
     }
+    }
      &__developer {text-align: center;
+         @include screen ("tablet") {
+             padding-top: 53px;
+         }
          & span {color: $color-main;
              
          }
@@ -46,11 +99,18 @@
     &__developer-name {
         @extend %links;
         text-transform: uppercase;
+        @include screen ("tablet") {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
     &__name {
         padding-bottom: 20px;
         font-weight: 700;
         display: block;
+        @include screen ("tablet") {
+            text-transform: uppercase;
+        }
     }
     &__developer-item {
         padding-bottom: 15px;

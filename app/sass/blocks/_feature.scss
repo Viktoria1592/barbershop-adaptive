@@ -1,58 +1,63 @@
 .features {
-      @include screen ("desktop") {
-      
+    @include screen ("desktop") {
         display: flex;
     }
-    
-    
-  
-   &__wrapper {
+    &__wrapper {
         @include wrapper;
         width: 320px;
-        @media (min-width:768px) and (max-width:1200px)
-        {
+        @media (min-width: 768px) and (max-width:1200px) {
             width: 640px;
-
         }
         @media (min-width:1200px) {
             width: 960px;
             margin-top: -163px;
-            
         }
     }
 }
-    .features-text {
-          @media (min-width:768px) and (max-width:1199px) {
-      
+.features-text {
+    @media (min-width: 768px) and (max-width:1199px) {
         display: flex;
-              flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    @include screen ("desktop") {
+        width: 33.333%;
+        flex-shrink: 0;
+        box-sizing: border-box;
+    }
+    @include screen ("tablet") {
+        &::before {
+            @include pseudo;
+            border-bottom: 23px solid $color-main;
+            border-left: 23px solid transparent;
+            border-right: 23px solid transparent;
+            background-color: transparent;
+            top: 40px;
+            left: -31px;
+            transform: rotate(45deg);
         }
-              @include screen ("desktop") {
-                  width: 320px;
-                  box-sizing: border-box;
-              }
-    
-
+    }
     &__advantage {
         @extend %heading-1;
         display: block;
         text-align: center;
         padding-bottom: 25px;
         padding-top: 32px;
-        
+
         @include screen ("tablet") {
             font-size: 40px;
-    line-height: 1;
-    font-weight: 700;
+            line-height: 1;
+            font-weight: 700;
             text-transform: inherit;
             width: 40%;
             padding-left: 40px;
             box-sizing: border-box;
             text-align: left;
-            
+        }
+        @include screen ("desktop") {
+            width: 90%;
+            padding-right: 39px;
         }
     }
-        
     &__description {
         @extend %text;
         padding: 0;
@@ -69,25 +74,28 @@
             padding-left: 89px;
             padding-top: 39px;
         }
+        @include screen ("desktop") {
+            padding: 21px 35px 35px 40px;
+            width: 90%;
+        }
     }
     &--border {
         @include screen ("tablet", max) {
-        border-bottom: 8px solid $background-color-main;
+            border-bottom: 8px solid $background-color-main;
+        }
     }
+    &--pos {
+        position: relative;
+        @media (min-width: 768px) and (max-width:1199px) {
+            margin-top: -194px;
         }
-        &--pos {
-            @media (min-width:768px) and (max-width:1199px) {
-                margin-top: -194px;
-            }
-        }
-        &--color {
-            background-color: $color-main;
-        }
+    }
+    &--color {
+        background-color: $color-main;
+    }
 }
-
 .features-stats {
     @include screen ("tablet") {
-       
         display: flex;
         flex-wrap: wrap;
     }
@@ -105,8 +113,6 @@
             align-items: stretch;
             line-height: 1.15;
         }
-       
-        
         &--color-1 {
             background-color: #404040;
         }
@@ -117,9 +123,8 @@
             background-color: $color-slider;
         }
         &--color-4 {
-             
             background-color: $background-color-main;
-        
+
             @include screen ("tablet") {
                 display: none;
             }
@@ -143,12 +148,11 @@
                 padding-bottom: 30px;
             }
         }
-            &--bottom {
-                @include screen ("tablet") {
+        &--bottom {
+            @include screen ("tablet") {
                 display: none;
             }
-            }
-        
+        }
     }
     &__number {
         color: $color-main;

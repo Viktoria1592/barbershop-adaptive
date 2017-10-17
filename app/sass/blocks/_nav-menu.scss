@@ -5,61 +5,50 @@
     }
     &--pos {
         position: relative;
-
     }
     &--color {
         @include screen ("tablet") {
             background-color: $color-base;
         }
-     
     }
-    
-     &__menu-link {
-           padding: 13px 10px;
-            font-size: 18px;
-            line-height: 1.3;
-            font-weight: 700;
-            color: #ffffff;
-            text-transform: uppercase;
-            text-decoration: none;
-            display: block;
-         
-          @include screen ("tablet") 
-            {
-                padding: 25px 15px; 
-                
-                &:hover {
-                    color: $color-menu;
-                }
-                &:active {
-                    color: #4d4d4d;
-                }
+    &__menu-link {
+        padding: 13px 10px;
+        font-size: 18px;
+        line-height: 1.3;
+        font-weight: 700;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+
+        @include screen ("tablet") {
+            padding: 25px 15px;
+
+            &:hover {
+                color: $color-menu;
             }
-         
-         @include screen ("desktop") {
-             padding: 30px 30px;
-             
-             &:hover {
-                    color: $color-base;
-                 background-color: $color-main;
-                }
-                &:active {
-                    color: #b2b2b2;
-                }
-         }
-            
-         &--pos {
-             @media (min-width:768px) and (max-width:1199px) {
-                 padding-left: 0;
-             }
-             
-             
-         }
-            
+            &:active {
+                color: #4d4d4d;
+            }
         }
-  
-   
-   
+
+        @include screen ("desktop") {
+            padding: 30px 30px;
+
+            &:hover {
+                color: $color-base;
+                background-color: $color-main;
+            }
+            &:active {
+                color: #b2b2b2;
+            }
+        }
+        &--pos {
+            @media (min-width: 768px) and (max-width:1199px) {
+                padding-left: 0;
+            }
+        }
+    }
     &__header-navigation {
         border: none;
         outline: none;
@@ -72,15 +61,13 @@
         &--pos {
             position: absolute;
             width: 72px;
-          height: 50px;
-           
+            height: 50px;
         }
-     
     }
     &__menu-list {
-        &--bg-color {background-color: $color-menu;}
-
-        
+        &--bg-color {
+            background-color: $color-menu;
+        }
     }
     &__menu-item {
 
@@ -90,8 +77,6 @@
         }
     }
     &__entry {
-            
-        
         a {
             @extend %links;
             line-height: 1.3;
@@ -100,173 +85,156 @@
             display: block;
             font-weight: 400;
             position: relative;
-            @media (min-width:768px) and (max-width:1199px) {
+            @media (min-width: 768px) and (max-width:1199px) {
                 font-size: 0;
             }
             @include screen ("desktop") {
                 text-transform: uppercase;
                 font-weight: 700;
                 padding: 30px 30px 30px 60px;
-                
+
                 &:hover {
                     color: $color-base;
-                 background-color: $color-main;
+                    background-color: $color-main;
                 }
                 &:active {
                     color: #b2b2b2;
                 }
             }
-            
             &:hover::before {
-                
+
                 @include screen ("tablet") {
                     background-position: 0px -178px;
 
                 }
                 @include screen ('tablet', max) {
-                     opacity: 0.3;
+                    opacity: 0.3;
                 }
-               
-                    
-                }
+            }
             &:active::before {
                 @include screen ("tablet") {
                     background-position: 0px -153px;
-
                     opacity: 1;
                 }
-                
+
                 @include screen ("desktop") {
                     background-position: 0px -178px;
-
                 }
             }
-            
+
             &::before {
-              @include pseudo;
+                @include pseudo;
                 background: url(../../img/sprites.png) 0px -153px no-repeat;
                 width: 23px;
                 height: 18px;
                 top: 19px;
                 left: 17px;
-                
-                @include screen ("tablet") {
-                top: 29px;
-                left: 0px;
-            }
-                @include screen ("desktop") {
-                top: 35px;
-                left: 20px;
-            }
-                
-                
 
+                @include screen ("tablet") {
+                    top: 29px;
+                    left: 0px;
+                }
+                @include screen ("desktop") {
+                    top: 35px;
+                    left: 20px;
+                }
             }
         }
     }
 }
+
 .nav-menu--opened .nav-menu__header-navigation::after,
 .nav-menu--opened .nav-menu__header-navigation::before {
     @include pseudo;
-            width: 25px;
-            height: 2px;
-            top: 50%;
-            left: 35%;
-            background-color: $color-main;
-    
-	
+    width: 25px;
+    height: 2px;
+    top: 50%;
+    left: 35%;
+    background-color: $color-main;
 }
-.nav-menu--opened .nav-menu__header-navigation { 
-            top: 0;
-            left: 0px;
-    
+
+.nav-menu--opened .nav-menu__header-navigation {
+    top: 0;
+    left: 0px;
 }
-.nav-menu--opened .nav-menu__header-navigation::after {transform: rotate(45deg);
-    
+
+.nav-menu--opened .nav-menu__header-navigation::after {
+    transform: rotate(45deg);
 }
-.nav-menu--opened .nav-menu__header-navigation::before {transform: rotate(-45deg);
-    
+
+.nav-menu--opened .nav-menu__header-navigation::before {
+    transform: rotate(-45deg);
 }
+
 .nav-menu--closed .nav-menu__header-navigation {
-     top: 0;
-            right:  0px;
-    
+    top: 0;
+    right: 0px;
 }
-.nav-menu--closed .nav-menu__header-navigation::before {content: "";
+
+.nav-menu--closed .nav-menu__header-navigation::before {
+    content: "";
     width: 35px;
     height: 2px;
     position: absolute;
     top: 30%;
-            left: 25%;
+    left: 25%;
     background-color: $color-main;
     box-shadow: 0 8px 0 0 $color-main,
-        
-    0 16px 0 0 $color-main,   
-	
+    0 16px 0 0 $color-main,
 }
+
 @media (max-width:767px) {
-.nav-menu--closed .nav-menu__menu-item { display: none;
-    &--active {display: block;
-        a {
-        text-align: center;}
-        
+    .nav-menu--closed .nav-menu__menu-item {
+        display: none;
+        &--active {
+            display: block;
+            a {
+                text-align: center;
+            }
+        }
     }
-	
-}
-.nav-menu--closed .nav-menu__entry { display: none;
-	
-}
-.nav-menu--opened .nav-menu__wrapper {position: absolute;
-    top: 0;
-    right: 0;
-    left: 70px;
-    height: 80vh;
-    background-color: $color-menu-opened;
-    z-index: 120;
-    
-	
-}
+    .nav-menu--closed .nav-menu__entry {
+        display: none;
+    }
+    .nav-menu--opened .nav-menu__wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 70px;
+        height: 80vh;
+        background-color: $color-menu-opened;
+        z-index: 120;
+    }
 }
 
 @media (min-width:768px) {
     .nav-menu {
-      
         &__wrapper {
 
-        @include wrapper;
+            @include wrapper;
             display: flex;
             justify-content: space-between;
             @include screen ("tablet") {
-               width: 640px; 
+                width: 640px;
             }
             @include screen ("desktop") {
-               width: 960px; 
+                width: 960px;
             }
-            
-            
         }
-        &__menu-list {background-color: $color-base;
-    
+        &__menu-list {
+            background-color: $color-base;
+
             display: flex;
             flex-grow: 1;
             flex-wrap: wrap;
-            
-            
-            
-            
         }
         &__menu-item {
             &--border {
                 border: none;
-                
             }
         }
         &__header-navigation {
             display: none;
         }
-       
-	
-}
-    
-    
+    }
 }

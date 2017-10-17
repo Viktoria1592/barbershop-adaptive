@@ -2,7 +2,7 @@
     color: $color-main;
     @include screen ("tablet") {
         display: flex;
-         flex-wrap: wrap;
+        flex-wrap: wrap;
     }
     &--color {
         background-color: $color-base;
@@ -11,15 +11,14 @@
             background-size: cover;
         }
         @media (max-width:767px) {
-        background-color:$background-color-main;}
+            background-color: $background-color-main;
+        }
     }
     &__wrapper {
-        @include screen ("tablet", max) {
-            @include wrapper;
-        width: 320px;
-            
-        }
-
+//        @include screen ("tablet", max) {
+//            @include wrapper;
+//            width: 320px;
+//        }
     }
     &__logo {
         margin: 0 auto;
@@ -36,5 +35,4 @@
             min-height: 85px;
         }
     }
-    
 }

@@ -3,6 +3,7 @@
     padding-bottom: 40px;
     @include screen ("tablet") {
         padding-top: 46px;
+        padding-bottom: 70px;
         box-sizing: border-box;
        
         display: flex;
@@ -11,9 +12,41 @@
         align-items: flex-start;
        
     }
+    @include screen ("desktop") {
+        padding-bottom: 100px;
+    }
+    &-main--color {
+        background-color: $color-main;
+    }
+    
     &--photo {
+        &::after {
+       @include pseudo;
+         @include screen ("tablet", max) {
+          border-top: 30px solid $color-main;
+            border-left: 160px solid transparent;
+            border-right: 160px solid transparent;
+            background-color: transparent;
+            bottom: -30px;
+            left: 0;
+         }
+    
+        @media (min-width:768px) and (max-width:1199px) {
+           border-top: 42px solid $color-main;
+            border-left: 320px solid transparent;
+            border-right: 320px solid transparent;
+            background-color: transparent;
+            bottom: -42px; 
+            left: 0;
+        }
+    }
         @include screen ("tablet") {
             padding-top: 60px;
+            padding-bottom: 60px;
+//            margin-bottom: -40px;
+        }
+        @include screen ("desktop") {
+            padding-bottom: 90px;
         }
     }
   
@@ -43,17 +76,8 @@
         position: relative;
         z-index: 100;
     }
-    @include screen ("tablet", max) {
-     &::after {
-          border-top: 30px solid $color-main;
-            border-left: 160px solid transparent;
-            border-right: 160px solid transparent;
-            background-color: transparent;
-            bottom: -30px;
-            left: 0;
-            @include pseudo;
-    }
-    }
+     
+    
     &__wrapper {
         @include wrapper;
         width: 320px;
@@ -176,6 +200,13 @@
             @include screen ("desktop") {
                 padding-top: 35px;
             }
+            &--big {
+               @include screen ("desktop") {
+                padding-top: 130px;
+                   
+            } 
+            }
+            
         }
         
     }
@@ -187,17 +218,30 @@
             padding-bottom: 35px;
             padding-right: 50px;
         }
+        &--width-min {
+            @include screen ("desktop") {
+            width: 316px;
+        }
+        }
         &--pos {
             padding-bottom: 25px;
+            @include screen ("desktop") {
+                padding-bottom: 55px;
+            }
             
         }
         
     }
     &__review {
     display: flex;
-        justify-content: space-between;
+
 
         transition: all 0.2s linear;
+        &--big {
+            @include screen ("desktop") {
+            display: flex;
+            }
+        }
         
         &--slider {
            position: absolute;
@@ -262,47 +306,69 @@
             
         }
         &--photo {
-            @include screen ("tablet") {
+          
+            @media (min-width:768px) and (max-width:1199px) {
             margin-bottom: 40px;
                 width: 100%;
+                
+                 &:last-child {
+                margin-bottom: 0;
+            }
                
         }
                 @include screen ("desktop") {
-                width: 33.333%;
+                    width: 33.333%;
+                    margin-right: 39px;
+                    
+                    
+                    &:last-child {
+                margin-right: 0;
+            }
             }
                     &-big {
                         width: 100%;
                         @include screen ("desktop") {
                             flex-direction: row;
+                            margin-right: 0;
+                            margin-bottom: 40px;
                         }
                     }
             @media (min-width:768px) and (max-width:1199px) {
                 flex-direction: row;
             }
+            
                
         }
         
     }
     &__client {
         &--pos {
-            margin-left: 20px;
-            margin-right: 20px;
-            @include screen ("tablet") {
+            @include screen ("tablet", max) {
+              margin-left: 20px;
+            margin-right: 20px;   
+            }
+        }
+            
+            &--main {
+                @include screen ("tablet") {
                 margin-left: 26px;
             }
              @include screen ("desktop") {
                 margin-left: 70px;
             }
-        }
+            }
+        
         &-item {
             @include screen ("tablet") {
                 padding-left: 50px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                
             }
             @include screen ("desktop") {
                 padding-left: 35px;
+                flex-grow: 1;
             }
         }
     }

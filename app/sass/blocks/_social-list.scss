@@ -1,14 +1,35 @@
 .social-list {
     font-size: 0;
+    @media (min-width:768px) and (max-width:1199px) {
+        width: 100%;
+    }
     
     &--pos {
+        @include screen ("tablet", max) {
         margin-top: 25px;
         margin-bottom: 33px;
+        }
+        @media (min-width:768px) and (max-width:1199px) {
+            order: 2;
+            margin-top: 45px;
+        }
+        @include screen ("desktop") {
+            padding-top: 53px;
+            
+        }
     }
     
     &__item {
         display: inline-block;
-        border: 1px solid #3e3e3e;
+        @media (min-width:768px) and (max-width:1199px) {
+            width: 33.333%;
+            box-sizing: border-box;
+        }
+        @include screen ("desktop") {
+            width: 50px;
+            height: 50px;
+            margin-right: 6px;
+        }
         
         &:active::before {
            opacity: 0.3; 
@@ -32,7 +53,9 @@
     }
         &--pos {
             position: relative;
+            @include screen ("desktop", max) {
                 height: 100px;
+            }
         }
         &::before {
             @include pseudo;
@@ -41,6 +64,7 @@
             background: url(../../img/sprites.png) no-repeat;
             
         }
+        @include screen ("tablet", max) {
         &--vk {
             width: 108px;
             
@@ -71,9 +95,53 @@
                 height: 36px;
             }
         }
+        }
+          @media (min-width:768px) and (max-width:1199px) {
+        &--vk {
+//            width: 108px;
+            
+            &::before {
+                background-position: -6px -10px;
+                width: 23px;
+                height: 26px;
+                left: 40%;
+                top: 45%;
+            }
+        }
+        &--fb {
+//            width: 98px;
+            
+            &::before {
+                background-position: -7px -105px;
+                width: 18px;
+                height: 39px;
+                left: 40%;
+            }
+        }
+        &--inst {
+//            width: 108px;
+            
+            &::before {
+                background-position: -7px -58px;
+                width: 36px;
+                height: 36px;
+            }
+        }
+        }
         
   
         
+    }
+    &__slogan {
+        @include screen ("desktop") {
+            font-size: 18px;
+    font-weight: 400;
+    color: $color-main;
+    line-height: 1.5;
+            padding-bottom: 18px;
+            display: block;
+            text-align: center;
+        }
     }
 }
  
