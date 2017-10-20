@@ -17,20 +17,6 @@
     
     &__wrapper {
         @include wrapper;
-        width: 320px;
-        @include screen ("tablet")
-         {
-            width: 640px;
-//            padding-left: 65px;
-//            padding-right: 65px;
-        }
-        @include screen ("desktop")
-        {
-            width: 960px;
-//            padding-left: 120px;
-//            padding-right: 120px;
-
-        }
     }
     &__title {
         @extend %heading-1;
@@ -74,7 +60,10 @@
             padding-left: 20px;
         }
        
-
+        &:hover {
+            text-decoration: underline;
+            color: #927866;
+        }
 
     }
     &__item {
@@ -111,6 +100,10 @@
         padding-left: 10px;
         padding-right: 10px;
         text-align: center;
+        
+        &:hover {
+           background-color: #826550; 
+        }
         &--pos {
             position: relative;
         }
@@ -132,11 +125,10 @@
             background-color: transparent;
             bottom: -15px;
             left: 0;
-            
-
-
-
         }
+        &:hover::after {  
+                border-top-color: #826550; 
+            }
 
     }
     &__button {

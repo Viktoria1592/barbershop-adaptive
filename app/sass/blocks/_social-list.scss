@@ -61,7 +61,7 @@
             @include pseudo;
             top: 40%;
             left: 35%;
-            background: url(../../img/sprites.png) no-repeat;
+            background: url("../img/sprites.png") no-repeat;
             
         }
         @include screen ("tablet", max) {
@@ -69,7 +69,7 @@
             width: 108px;
             
             &::before {
-                background-position: -6px -10px;
+                background-position: -15px -14px;
                 width: 23px;
                 height: 26px;
                 left: 40%;
@@ -80,7 +80,7 @@
             width: 98px;
             
             &::before {
-                background-position: -7px -105px;
+                background-position: -18px -106px;
                 width: 18px;
                 height: 39px;
                 left: 40%;
@@ -90,18 +90,16 @@
             width: 108px;
             
             &::before {
-                background-position: -7px -58px;
+                background-position: 0px -57px;
                 width: 36px;
                 height: 36px;
             }
         }
         }
           @media (min-width:768px) and (max-width:1199px) {
-        &--vk {
-//            width: 108px;
-            
+        &--vk {    
             &::before {
-                background-position: -6px -10px;
+                background-position: -15px -14px;
                 width: 23px;
                 height: 26px;
                 left: 40%;
@@ -109,27 +107,51 @@
             }
         }
         &--fb {
-//            width: 98px;
             
             &::before {
-                background-position: -7px -105px;
+                background-position: -18px -106px;
                 width: 18px;
                 height: 39px;
                 left: 40%;
             }
         }
         &--inst {
-//            width: 108px;
             
             &::before {
-                background-position: -7px -58px;
+                background-position: 0px -57px;
                 width: 36px;
                 height: 36px;
             }
         }
         }
-        
-  
+        @include screen ("desktop") {
+        &--vk {
+            
+            &::before {
+                background-position: -15px -259px;
+                width: 15px;
+                height: 17px;
+                left: 40%;
+            }
+        }
+        &--fb {
+            
+            &::before {
+                background-position: -17px -328px;
+                width: 10px;
+                height: 31px;
+                left: 40%;
+            }
+        }
+        &--inst {
+            
+            &::before {
+                background-position: -15px -293px;
+                width: 19px;
+                height: 19px;
+            }
+        }
+        }
         
     }
     &__slogan {

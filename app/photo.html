@@ -8,17 +8,21 @@
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
-     <header class="page-header  page-header__wrapper  page-header--color">
+     <header class="page-header  page-header--color">
 <h2 class="page-header__title  visually-hidden">Барбершоп Бородинский</h2>
-        <div class="page-header__logo">
-            <img src="img/logotype-mobile.svg" width="230" height="40" alt="Логотип">
+        <div class="page-header__logo  page-header__logo--min">
+           <picture>
+               <source media="(min-width:1200px)" srcset="img/logotype-desktop.svg">
+               <source media="(min-width:768px)" srcset="img/logotype-tablet.svg">
+                <img src="img/logotype-mobile.svg" width="230" height="40" alt="Логотип">
+            </picture>
         </div>
         <nav class="nav-menu nav-menu--pos  nav-menu--color   nav-menu--closed">
           <button class="nav-menu__header-navigation  nav-menu__header-navigation--bg-color  nav-menu__header-navigation--pos" type="button"></button>
             <div class="nav-menu__wrapper">
                 <ul class="nav-menu__menu-list  nav-menu__menu-list--bg-color">
                     <li class="nav-menu__menu-item   nav-menu__menu-item--border"><a href="index.html" class="nav-menu__menu-link  nav-menu__menu-link--pos">Главная</a></li>
-                    <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a href="" class="nav-menu__menu-link">Наши работы</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a class="nav-menu__menu-link">Наши работы</a></li>
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="form.html" class="nav-menu__menu-link">Записаться</a></li>
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Контакты</a></li>
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Html academy</a></li>
@@ -29,67 +33,85 @@
             </div>
         </nav>
     </header>
-    <main class="service-examples__main  service-examples-main--color">
-       <article class="service-examples  service-examples--photo  service-examples__wrapper  service-examples--pos">
-           <h2 class="service-examples__title  service-examples__title--photo">Наши работы</h2>
-           <a class="service-examples__button  link-item  link-item--color-black  link-item--size-big  link-item--border-white  link-item--active-gray  link-item--pos" href="index.html">На главную</a>
-           <section class="service-examples__review  service-examples__review--photo  service-examples__review--photo-big  service-examples__review--pos  service-examples__review--border">
-              <img src="img/photo-1-mobile.jpg" width="280" height="480" class="service-examples__image  service-examples__image--pos" alt="Клиент-1">
-              <span class="service-examples__best-work  service-examples__best-work--color  service-examples__best-work--pos">Работа месяца</span>
-            <div class="service-examples__client-item">
-                    <div class="service-examples__client  service-examples__client--pos">
-                        <b class="service-examples__client-name  service-examples__client-name-photo  service-examples__client-name-photo--big  service-examples__client-name--pos">Лжепётр Мчиславский</b>
-                       <p class="service-examples__client-review  service-examples__client-review--width-min  service-examples__client-review--pos">Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</p>
-                   </div>
-                   <div class="service-examples__service-name  service-examples__service-name--pos">
-                   <span>Стрижка</span>
-                   <span>Бритье</span>
-                   <span>Усы</span>
-                   </div>
-              </div>
-           </section>
-           <div class="service-examples__review--big">
-               <section class="service-examples__review  service-examples__review--photo  service-examples__review--pos  service-examples__review--border">
-                   <img src="img/photo-2-mobile.jpg" width="280" height="176" alt="Клиент-2" class="service-examples__image  service-examples__image--pos">
-                 <div class="service-examples__client-item">
-                       <div class="service-examples__client  service-examples__client--pos">
-                            <b class="service-examples__client-name  service-examples__client-name-photo  service-examples__client-name--pos">Саша Мальцев</b>
-                           <p class="service-examples__client-review  service-examples__client-review--pos">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45? </p>
+    <main>
+      <article class="service-examples-main  service-examples-main--pos  service-examples-main-photo  service-examples-main--color">
+            <div class="service-examples  service-examples--photo  service-examples__wrapper">
+               <h2 class="service-examples__title  service-examples__title--photo">Наши работы</h2>
+               <a class="service-examples__button  link-item  link-item--color-black  link-item--size-big  link-item--border-white  link-item--active-gray  link-item--pos" href="index.html">На главную</a>
+               <section class="service-examples__review  service-examples__review--photo  service-examples__review--photo-big  service-examples__review--pos  service-examples__review--border">
+                  <picture>
+               <source media="(min-width:1200px)" srcset="img/photo-1-desktop.jpg">
+               <source media="(min-width:768px)" srcset="img/photo-1-tablet.jpg">
+                <img src="img/photo-1-mobile.jpg" class="service-examples__image  service-examples__image--big service-examples__image--pos" alt="Клиент-1">
+            </picture>
+                  <span class="service-examples__best-work  service-examples__best-work--color  service-examples__best-work--pos">Работа месяца</span>
+                <div class="service-examples__client-item">
+                        <div class="service-examples__client  service-examples__client--pos">
+                            <b class="service-examples__client-name  service-examples__client-name-photo  service-examples__client-name-photo--big  service-examples__client-name--pos">Лжепётр Мчиславский</b>
+                           <p class="service-examples__client-review  service-examples__client-review--width-min  service-examples__client-review--pos">Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</p>
                        </div>
                        <div class="service-examples__service-name  service-examples__service-name--pos">
-                       <span>Стрижка</span>
+                       <span class="service-examples__name-item  service-examples__name-item--scissors">Стрижка</span>
+                       <span class="service-examples__name-item  service-examples__name-item--beard">Бритье</span>
+                       <span class="service-examples__name-item  service-examples__name-item--mustache">Усы</span>
                        </div>
                   </div>
                </section>
-               <section class="service-examples__review  service-examples__review--photo  service-examples__review--pos  service-examples__review--pos  service-examples__review--border">
-                  <img src="img/photo-3-mobile.jpg" width="280" height="176" alt="Клиент-3" class="service-examples__image  service-examples__image--pos">
-               <div class="service-examples__client-item">
+               <div class="service-examples__review--big">
+                   <section class="service-examples__review  service-examples__review--photo  service-examples__review--pos  service-examples__review--border">
+                        <picture>
+               <source media="(min-width:1200px)" srcset="img/photo-2-desktop.jpg">
+               <source media="(min-width:768px)" srcset="img/photo-2-tablet.jpg">
+                  <img src="img/photo-2-mobile.jpg" alt="Клиент-2" class="service-examples__image  service-examples__image--pos">
+            </picture>
+                     <div class="service-examples__client-item">
                            <div class="service-examples__client  service-examples__client--pos">
-                           <b class="service-examples__client-name  service-examples__client-name-photo  service-examples__client-name--pos">Владимир Иваныч</b>
-                           <p class="service-examples__client-review  service-examples__client-review--pos">К зимнему сезону — готов!</p>
+                                <b class="service-examples__client-name  service-examples__client-name-photo  service-examples__client-name--pos">Саша Мальцев</b>
+                               <p class="service-examples__client-review  service-examples__client-review--pos">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45? </p>
+                           </div>
+                           <div class="service-examples__service-name  service-examples__service-name--pos">
+                           <span class="service-examples__name-item  service-examples__name-item--scissors">Стрижка</span>
+                           </div>
+                      </div>
+                   </section>
+                   <section class="service-examples__review  service-examples__review--photo  service-examples__review--pos  service-examples__review--pos  service-examples__review--border">
+                     <picture>
+               <source media="(min-width:1200px)" srcset="img/photo-3-desktop.jpg">
+               <source media="(min-width:768px)" srcset="img/photo-3-tablet.jpg">
+                 <img src="img/photo-3-mobile.jpg" alt="Клиент-3" class="service-examples__image  service-examples__image--pos">
+            </picture>
+                   <div class="service-examples__client-item">
+                               <div class="service-examples__client  service-examples__client--pos">
+                               <b class="service-examples__client-name  service-examples__client-name-photo  service-examples__client-name--pos">Владимир Иваныч</b>
+                               <p class="service-examples__client-review  service-examples__client-review--pos">К зимнему сезону — готов!</p>
+                           </div>
+                           <div class="service-examples__service-name  service-examples__service-name--pos">
+                           <span class="service-examples__name-item  service-examples__name-item--beard">Борода</span>
+                           <span class="service-examples__name-item  service-examples__name-item--mustache">Усы</span>
+                           </div>
                        </div>
-                       <div class="service-examples__service-name  service-examples__service-name--pos">
-                       <span>Борода</span>
-                       <span>Усы</span>
+                   </section>
+                   <section class="service-examples__review  service-examples__review--photo  service-examples__review--pos  service-examples__review--border">
+                      <picture>
+               <source media="(min-width:1200px)" srcset="img/photo-4-desktop.jpg">
+               <source media="(min-width:768px)" srcset="img/photo-4-tablet.jpg">
+                <img src="img/photo-4-mobile.jpg"  alt="Клиент-4" class="service-examples__image  service-examples__image--pos">
+            </picture>
+                      <div class="service-examples__client-item">
+                            <div class="service-examples__client  service-examples__client--pos">
+                               <b class="service-examples__client-name  service-examples__client-name-photo  service-examples__client-name--pos">Винстон Синий</b>
+                               <p class="service-examples__client-review  service-examples__client-review--pos">Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!</p>
+                           </div>
+                           <div class="service-examples__service-name  service-examples__service-name--pos">
+                           <span class="service-examples__name-item  service-examples__name-item--scissors">Стрижка</span>
+                           </div>
                        </div>
-                   </div>
-               </section>
-               <section class="service-examples__review  service-examples__review--photo  service-examples__review--pos  service-examples__review--border">
-                   <img src="img/photo-4-mobile.jpg" width="280" height="176" alt="Клиент-4" class="service-examples__image  service-examples__image--pos">
-                  <div class="service-examples__client-item">
-                        <div class="service-examples__client  service-examples__client--pos">
-                           <b class="service-examples__client-name  service-examples__client-name-photo  service-examples__client-name--pos">Винстон Синий</b>
-                           <p class="service-examples__client-review  service-examples__client-review--pos">Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!</p>
-                       </div>
-                       <div class="service-examples__service-name  service-examples__service-name--pos">
-                       <span>Стрижка</span>
-                       </div>
-                   </div>
-               </section>
-           </div>
-        </article>
-        <section class="prices  prices--color">
-            <div class="prices__block  prices__wrapper  prices--pos">
+                   </section>
+               </div>
+            </div>
+       </article>
+        <section class="prices  prices--pos  prices--color">
+            <div class="prices__block  prices__wrapper">
                <h2 class="prices__title">Прейскурант</h2>
                 <table class="prices__price-list  prices__price-list--pos">
                     <tr class="prices__price-point">
@@ -124,7 +146,7 @@
                     </tr>
                 </table>
                 <div class="prices__price-sales  prices__price-sales--pos  prices__price-sales--border-gray">
-                <img src="img/clocks-mobile.svg" width="60" height="60" alt="Часы работы">
+               <img src="img/clocks-mobile.svg" alt="Часы работы">
                 <p class="prices__price-hours"> c 10:00 до 14:00 <br> скидка 20%</p>
                 </div>
             </div>

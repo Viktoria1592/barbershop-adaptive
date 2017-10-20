@@ -28,25 +28,27 @@
     &--pos {
         position: relative;
     }
+ 
     &::after {
         @include pseudo;
-          border-top: 30px solid $background-color-main;
-            border-left: 160px solid transparent;
-            border-right: 160px solid transparent;
-            background-color: transparent;
-            bottom: -30px;
+             bottom: -30px;
             left: 0;
-        
+             z-index: 400;
+             width: 100%;
+             height: 30px;
+             background-image: 
+                 linear-gradient(to top right, transparent 50%, $color-slider 50%),
+                 linear-gradient(to top left, transparent 50%, $color-slider 50%);
+             background-repeat: no-repeat;
+             background-position: 0 0, 100% 0;
+             background-size: 50.3% 100%;
+       
          @include screen ("desktop") {
-            border-top: 60px solid $background-color-main;
-            border-left: 480px solid transparent;
-            border-right: 480px solid transparent;
+        height: 60px;
             bottom: -60px;
         }
         @media (min-width:768px) and (max-width:1199px) {
-           border-top: 42px solid $background-color-main;
-            border-left: 320px solid transparent;
-            border-right: 320px solid transparent;
+         height: 42px;
             bottom: -42px; 
         }
             
@@ -82,6 +84,11 @@
             height: 100px;
             display: block;
             margin: 0 auto;
+        }
+        &--border {
+            @media (min-width:768px) and (max-width:1199px) {
+                border-bottom: 1px solid #4a4a4a;
+            }
         }
     }
    &__advantage {

@@ -4,7 +4,7 @@ var cssnano = require('gulp-cssnano');
 var  browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
-
+var bulkSass = require('gulp-sass-bulk-import');
 
 
 
@@ -18,6 +18,14 @@ gulp.task('sass', function(){ // Создаем таск "sass"
     .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
     .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
     .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+});
+ 
+gulp.task('css', function() {
+    return gulp.src(srcDir + 'app/sass/styles.scss')
+            .pipe(bulkSass())
+             .pipe(sass())
+//            .pipe(sass({includePaths: ['src/sass']}))
+            .pipe( gulp.dest('app/css/') );
 });
 
 gulp.task('browser-sync', function() { // Создаем таск browser-sync

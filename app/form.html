@@ -8,21 +8,24 @@
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
-   <header class="page-header  page-header__wrapper  page-header--color">
+   <header class="page-header  page-header--color">
 <h2 class="page-header__title  visually-hidden">Барбершоп Бородинский</h2>
         <div class="page-header__logo">
-            <img src="img/logotype-mobile.svg" width="230" height="40" alt="Логотип">
+           <picture>
+               <source media="(min-width:1200px)" srcset="img/logotype-desktop.svg">
+               <source media="(min-width:768px)" srcset="img/logotype-tablet.svg">
+                <img src="img/logotype-mobile.svg" width="230" height="40" alt="Логотип">
+            </picture>
         </div>
         <nav class="nav-menu nav-menu--pos  nav-menu--color   nav-menu--closed">
           <button class="nav-menu__header-navigation  nav-menu__header-navigation--bg-color  nav-menu__header-navigation--pos" type="button"></button>
             <div class="nav-menu__wrapper">
                 <ul class="nav-menu__menu-list  nav-menu__menu-list--bg-color">
-                    <li class="nav-menu__menu-item   nav-menu__menu-item--border"><a href="index.html" class="nav-menu__menu-link  nav-menu__menu-link--pos">Главная</a></li>
-                    <li class="nav-menu__menu-item   nav-menu__menu-item--border"><a href="photo.html" class="nav-menu__menu-link">Наши работы</a></li>
-                    <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a href="" class="nav-menu__menu-link">Записаться</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="index.html" class="nav-menu__menu-link  nav-menu__menu-link--pos">Главная</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="photo.html" class="nav-menu__menu-link">Наши работы</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a class="nav-menu__menu-link">Записаться</a></li>
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Контакты</a></li>
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Html academy</a></li>
-                    
                 </ul>
                 <div class="nav-menu__entry">
                 <a href="#" title="Войти">Вход</a></div>
@@ -94,20 +97,23 @@
             </form>
         </article>
     </main>
-    <footer class="page-footer  page-footer__wrapper">
-        <div class="page-footer__address">
-                <span  class="page-footer__name">Барбершоп Бородинский</span>
-               <span class="page-footer__address-description"> г.Санкт-Петербург, ул.Большая Конюшенная, 19/8 </span>
-                <a class="page-footer__telephone  link-item  link-item--color-white  link-item--size-small  link-item--border-gray  link-item--active-black" href="tel:+7812555666666">+7(812) 555-66-66</a>
-        </div>
-        <div class="social-list  social-list--pos">
-            <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--vk" href="#">Вконтакте</a>
-            <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Фейсбук</a>
-            <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--inst" href="#">Инстаграм</a>
-        </div>
-        <div class="page-footer__developer">
-            <span class="page-footer__developer-item">Разработано:</span>
-            <a class="page-footer__developer-name  link-item  link-item--color-white  link-item--size-small  link-item--border-gray  link-item--active-black" href="#">Html academy</a>
+    <footer class="page-footer">
+        <div class="page-footer__block  page-footer__wrapper">
+            <div class="page-footer__address">
+                    <span  class="page-footer__name">Барбершоп Бородинский</span>
+                   <span class="page-footer__address-description"> г.Санкт-Петербург, ул.Большая Конюшенная, 19/8 </span>
+                    <a class="page-footer__telephone  page-footer__telephone--border  page-footer__telephone--pos  page-footer__telephone--color-white  page-footer__telephone--active-black" href="tel:+7812555666666">+7(812) 555-66-66</a>
+            </div>
+            <div class="social-list  social-list--pos">
+               <span class="social-list__slogan">Давайте дружить!</span>
+                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--vk" href="#">Вконтакте</a>
+                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Фейсбук</a>
+                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--inst" href="#">Инстаграм</a>
+            </div>
+            <div class="page-footer__developer">
+                <span class="page-footer__developer-item">Разработано:</span>
+                <a class="page-footer__developer-name  link-item  link-item--type-block  link-item--pos  link-item--color-white  link-item--size-small  link-item--border-gray  link-item--active-black" href="#">Html academy</a>
+            </div>
         </div>
     </footer>
     <script>

@@ -24,29 +24,11 @@
         @include screen ("tablet") {
             padding: 25px 15px;
 
-            &:hover {
-                color: $color-menu;
-            }
-            &:active {
-                color: #4d4d4d;
-            }
         }
 
         @include screen ("desktop") {
             padding: 30px 30px;
 
-            &:hover {
-                color: $color-base;
-                background-color: $color-main;
-            }
-            &:active {
-                color: #b2b2b2;
-            }
-        }
-        &--pos {
-            @media (min-width: 768px) and (max-width:1199px) {
-                padding-left: 0;
-            }
         }
     }
     &__header-navigation {
@@ -65,6 +47,39 @@
         }
     }
     &__menu-list {
+
+        a[href] {
+            @include screen ("tablet, max") {
+
+            &:hover {
+                background-color: #755a46;
+            }
+            &:active {
+               color: #978374;
+            }
+        }
+               @include screen ("tablet") {
+
+            &:hover {
+                color: $color-menu;
+            }
+            &:active {
+                color: #4d4d4d;
+            }
+        }
+
+        @include screen ("desktop") {
+
+            &:hover {
+                color: $color-base;
+                background-color: $color-main;
+            }
+            &:active {
+                color: #b2b2b2;
+            }
+        }
+            
+        }
         &--bg-color {
             background-color: $color-menu;
         }
@@ -74,6 +89,25 @@
         &--border {
             border-top: 1px solid #886e5b;
             border-bottom: 1px solid #71543f;
+        }
+        &--active { 
+            @include screen ("tablet") {
+                position: relative;
+            &::before {
+                @include pseudo;
+                    left: 15px;
+                    right: 15px;
+                    bottom: 0;
+                    height: 3px;
+                    background-color: $color-menu;
+                }
+            }
+              @include screen ("desktop") {
+                  &::before {
+                left: 30px;
+                right: 30px;
+            }
+            }
         }
     }
     &__entry {
@@ -104,7 +138,7 @@
             &:hover::before {
 
                 @include screen ("tablet") {
-                    background-position: 0px -178px;
+                    background-position: -22px -188px;
 
                 }
                 @include screen ('tablet', max) {
@@ -113,18 +147,18 @@
             }
             &:active::before {
                 @include screen ("tablet") {
-                    background-position: 0px -153px;
+                    background-position: -20px -156px;
                     opacity: 1;
                 }
 
                 @include screen ("desktop") {
-                    background-position: 0px -178px;
+                    background-position: -22px -188px;
                 }
             }
 
             &::before {
                 @include pseudo;
-                background: url(../../img/sprites.png) 0px -153px no-repeat;
+                background: url(../img/sprites.png) -20px -156px no-repeat;
                 width: 23px;
                 height: 18px;
                 top: 19px;
@@ -135,7 +169,7 @@
                     left: 0px;
                 }
                 @include screen ("desktop") {
-                    top: 35px;
+                    top: 33px;
                     left: 20px;
                 }
             }

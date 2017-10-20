@@ -1,17 +1,17 @@
 .features {
-    @include screen ("desktop") {
-        display: flex;
+    @include screen ("tablet", max) {
+      background-color: $color-main;
     }
     &__wrapper {
-        @include wrapper;
-        width: 320px;
-        @media (min-width: 768px) and (max-width:1200px) {
-            width: 640px;
-        }
+        @include wrapper; 
         @media (min-width:1200px) {
-            width: 960px;
             margin-top: -163px;
         }
+    }
+    &__block {
+         @include screen ("desktop") {
+        display: flex;
+    }
     }
 }
 .features-text {

@@ -1,34 +1,58 @@
-.entry-color-brown, .entry-opacity-1, .facebook-copy, .insta-icon-big, .vk-icon-big{
+.vk-icon-big, .vk-icon-small, .entry-color-brown, .entry-opacity-1, .facebook-icon-big, .facebook-icon-small, .insta-icon-big, .insta-icon-small, .login{
 	background: url(sprites.png) no-repeat;
 }
 
+.vk-icon-big{
+	background-position: -15px -14px ;
+	width: 23px;
+	height: 26px;
+}
+
+.vk-icon-small{
+	background-position: -15px -259px ;
+	width: 15px;
+	height: 17px;
+}
+
 .entry-color-brown{
-	background-position: 0 -178px ;
+	background-position: -22px -188px ;
 	width: 16px;
 	height: 16px;
 }
 
 .entry-opacity-1{
-	background-position: 0 -153px ;
+	background-position: -20px -156px ;
 	width: 16px;
 	height: 16px;
 }
 
-.facebook-copy{
-	background-position: -7px -105px ;
+.facebook-icon-big{
+	background-position: -18px -106px ;
 	width: 18px;
 	height: 39px;
 }
 
+.facebook-icon-small{
+	background-position: -17px -328px ;
+	width: 10px;
+	height: 21px;
+}
+
 .insta-icon-big{
-	background-position: -7px -58px ;
+	background-position: 0 -57px ;
 	width: 36px;
 	height: 36px;
 }
 
-.vk-icon-big{
-	background-position: -6px -10px ;
-	width: 23px;
-	height: 26px;
+.insta-icon-small{
+	background-position: -15px -293px ;
+	width: 19px;
+	height: 19px;
+}
+
+.login{
+	background-position: -16px -218px ;
+	width: 16px;
+	height: 16px;
 }
 

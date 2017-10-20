@@ -44,8 +44,17 @@ div::after {
     margin-left: -$size;
   }
 }
+
+
 @mixin wrapper {
     margin: 0 auto;
+    width: 320px;
+    @media (min-width: 768px) and (max-width:1200px) {
+            width: 640px;
+        }
+        @media (min-width:1200px) {
+            width: 960px;
+}
 }
 
 /*
