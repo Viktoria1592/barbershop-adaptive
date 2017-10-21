@@ -4,21 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Barbershop Форма записи</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
+
 <body>
-   <header class="page-header  page-header--color">
-<h2 class="page-header__title  visually-hidden">Барбершоп Бородинский</h2>
-        <div class="page-header__logo">
-           <picture>
-               <source media="(min-width:1200px)" srcset="img/logotype-desktop.svg">
-               <source media="(min-width:768px)" srcset="img/logotype-tablet.svg">
+    <header class="page-header  page-header--color">
+        <h2 class="page-header__title  visually-hidden">Барбершоп Бородинский</h2>
+        <div class="page-header__logo  page-header__logo--min">
+            <picture>
+                <source media="(min-width:1200px)" srcset="img/logotype-desktop.svg">
+                <source media="(min-width:768px)" srcset="img/logotype-tablet.svg">
                 <img src="img/logotype-mobile.svg" width="230" height="40" alt="Логотип">
             </picture>
         </div>
         <nav class="nav-menu nav-menu--pos  nav-menu--color   nav-menu--closed">
-          <button class="nav-menu__header-navigation  nav-menu__header-navigation--bg-color  nav-menu__header-navigation--pos" type="button"></button>
+            <button class="nav-menu__header-navigation  nav-menu__header-navigation--bg-color  nav-menu__header-navigation--pos" type="button"></button>
             <div class="nav-menu__wrapper">
                 <ul class="nav-menu__menu-list  nav-menu__menu-list--bg-color">
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="index.html" class="nav-menu__menu-link  nav-menu__menu-link--pos">Главная</a></li>
@@ -28,84 +29,105 @@
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Html academy</a></li>
                 </ul>
                 <div class="nav-menu__entry">
-                <a href="#" title="Войти">Вход</a></div>
+                    <a href="#" title="Войти">Вход</a></div>
             </div>
         </nav>
     </header>
     <main>
-        <article class="service-form  wrapper">
-            <h2 class="service-form__title">Запись на стрижку</h2>
-            <form action="" class="service-form__description">
-                <fieldset class="service-form__main-information">
-                  <input class="service-form__input-area" type="text" name="surname" id="surname">
-                   <label for="surname">Фамилия</label>
-                   <input class="service-form__input-area" type="text" name="name" id="name">
-                    <label for="name">Имя</label>
-                    <input class="service-form__input-area" type="text" name="last-name" id="last-name">
-                    <label for="last-name">Отчество</label>
-                    <input class="service-form__input-area" type="tel" name="number" id="number">
-                    <label for="number">Контактный телефон</label>
-                    <input class="service-form__input-area" type="email" name="email" id="email">
-                    <label for="email">Контактный email</label>
-                    <textarea class="service-form__input-area" name="add-information" id="add-information" cols="30" rows="10"></textarea>
-                    <label for="add-information">Доп.информация для мастера</label>
-                </fieldset>
-                <fieldset class="service-form__list">
-                    <legend class="service-form__text">Выберите модель бороды:</legend>
-                  <div class="service-form__model">
-                        <input class="service-form__input" type="radio" name="model-1" id="model-1">
-                        <label for="model-1">адмирал</label>
-                        <img src="" alt="">
-                   </div>
-                    <div class="service-form__model">
-                        <input class="service-form__input" type="radio" name="model-1" id="model-2">
-                        <label for="model-2">лесоруб</label>
-                        <img src="" alt="">
-                    </div>
-                   <div class="service-form__model">
-                         <input class="service-form__input" type="radio" name="model-1" id="model-3">
-                        <label for="model-3">полярник</label>
-                        <img src="" alt="">
-                    </div>
-                   <div class="service-form__model">
-                         <input class="service-form__input" type="radio" name="model-1" id="model-4">
-                        <label for="model-4">боярин</label>
-                        <img src="" alt="">
-                    </div>
-                   <div class="service-form__model">
-                         <input class="service-form__input" type="radio" name="model-1" id="model-5">
-                        <label for="model-5">мудрец</label>
-                        <img src="" alt="">
-                    </div>
-                </fieldset>
-                <fieldset class="service-form__additional-services">
-                    <legend class="service-form__text">Дополнительные услуги:</legend>
-                  <input class="service-form__input" type="checkbox" name="service-1" id="service-1">
-                    <label for="service-1">Подкрасить бороду</label>
-                    <input class="service-form__input" type="checkbox" name="service-2" id="service-2">
-                    <label for="service-2">Накрутить усы</label>
-                    <input class="service-form__input" type="checkbox" name="service-3" id="service-3">
-                    <label for="service-3">Причесать бороду</label>
-                    <input class="service-form__input" type="checkbox" name="service-4" id="service-5">
-                    <label for="service-4">Подровнять виски</label>
-                    <input class="service-form__input" type="checkbox" name="service-5" id="service-5">
-                    <label for="service-5">Убрать седину</label>
-                    <input class="service-form__input" type="checkbox" name="service-6" id="service-6">
-                    <label for="service-6">Отполировать лысину</label>
-                </fieldset>
-                <button class="btn" type="submit">Отправить заявку</button>
-            </form>
+        <article class="service-form  service-form--color">
+            <div class="service-form__wrapper">
+                <h2 class="service-form__title">Запись на стрижку</h2>
+                <a class="service-examples__button  link-item  link-item--color-black  link-item--size-big  link-item--border-white  link-item--active-gray  link-item--pos" href="index.html">На главную</a>
+                <form action="" class="service-form__description">
+                    <fieldset class="service-form__main-information">
+                   <div class="service-form__information">
+                                 <input class="service-form__input  service-form__input--min  service-form__input--border" type="text" name="surname" id="surname" placeholder="Фамилия">
+                            <label for="surname"></label>
+                            <input class="service-form__input  service-form__input--min  service-form__input--first   service-form__input--border" type="text" name="name" id="name" placeholder="Имя">
+                            <label for="name"></label>
+                            <input class="service-form__input  service-form__input--min  service-form__input--min-pos   service-form__input--border  service-form__input--margin-big" type="text" name="last-name" id="last-name" placeholder="Отчество">
+                            <label for="last-name"></label>
+                            <input class="service-form__input  service-form__input--border" type="tel" name="number" id="number" placeholder="Контактный телефон">
+                            <label for="number"></label>
+                            <input class="service-form__input  service-form__input--margin-big  service-form__input--border" type="email" name="email" id="email" placeholder="Контактный email">
+                            <label for="email"></label>
+                            <textarea class="service-form__input  service-form__input--border" name="add-information" id="add-information" cols="30" rows="10" placeholder="Доп.информация для мастера"></textarea>
+                            <label for="add-information"></label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="service-form__list">
+                        <legend class="service-form__text">Выберите модель бороды:</legend>
+                        <div class="service-form__model-list">
+                            <div class="service-form__model">
+                                <input class="service-form__input  service-form__input--disabled" type="radio" name="model-1" id="model-1">
+                                <label for="model-1">адмирал</label>
+                                <img src="img/beard-1.svg" alt="">
+                            </div>
+                            <div class="service-form__model">
+                                <input class="service-form__input  service-form__input--disabled" type="radio" name="model-1" id="model-2">
+                                <label for="model-2">лесоруб</label>
+                                <img src="img/beard-2.svg" alt="">
+                            </div>
+                            <div class="service-form__model">
+                                <input class="service-form__input  service-form__input--disabled" type="radio" name="model-1" id="model-3">
+                                <label for="model-3">полярник</label>
+                                <img src="img/beard-3.svg" alt="">
+                            </div>
+                            <div class="service-form__model">
+                                <input class="service-form__input  service-form__input--disabled" type="radio" name="model-1" id="model-4">
+                                <label for="model-4">боярин</label>
+                                <img src="img/beard-4.svg" alt="">
+                            </div>
+                            <div class="service-form__model">
+                                <input class="service-form__input  service-form__input--disabled" type="radio" name="model-1" id="model-5">
+                                <label for="model-5">мудрец</label>
+                                <img src="img/beard-5.svg" alt="">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="service-form__additional-services">
+                        <legend class="service-form__text  service-form__text--big">Дополнительные услуги:</legend>
+                        <div class="service-form__service-items">
+                            <div class="service-form__service-item">
+                                <input class="service-form__input  service-form__input--disabled" type="checkbox" name="service-1" id="service-1">
+                                <label for="service-1">Подкрасить бороду</label>
+                            </div>
+                            <div class="service-form__service-item">
+                                <input class="service-form__input  service-form__input--disabled" type="checkbox" name="service-2" id="service-2">
+                                <label for="service-2">Накрутить усы</label>
+                            </div>
+                            <div class="service-form__service-item">
+                                <input class="service-form__input  service-form__input--disabled" type="checkbox" name="service-3" id="service-3">
+                                <label for="service-3">Причесать бороду</label>
+                            </div>
+                            <div class="service-form__service-item">
+                                <input class="service-form__input  service-form__input--disabled" type="checkbox" name="service-4" id="service-5">
+                                <label for="service-4">Подровнять виски</label>
+                            </div>
+                            <div class="service-form__service-item">
+                                <input class="service-form__input  service-form__input--disabled" type="checkbox" name="service-5" id="service-5">
+                                <label for="service-5">Убрать седину</label>
+                            </div>
+                            <div class="service-form__service-item">
+                                <input class="service-form__input  service-form__input--disabled" type="checkbox" name="service-6" id="service-6">
+                                <label for="service-6">Отполировать лысину</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button class="btn   link-item  link-item--type-block  link-item--size-small" type="submit">Отправить заявку</button>
+                </form>
+            </div>
         </article>
     </main>
     <footer class="page-footer">
         <div class="page-footer__block  page-footer__wrapper">
             <div class="page-footer__address">
-                    <span  class="page-footer__name">Барбершоп Бородинский</span>
-                   <span class="page-footer__address-description"> г.Санкт-Петербург, ул.Большая Конюшенная, 19/8 </span>
-                    <a class="page-footer__telephone  page-footer__telephone--border  page-footer__telephone--pos  page-footer__telephone--color-white  page-footer__telephone--active-black" href="tel:+7812555666666">+7(812) 555-66-66</a>
+                <span class="page-footer__name">Барбершоп Бородинский</span>
+                <span class="page-footer__address-description"> г.Санкт-Петербург, ул.Большая Конюшенная, 19/8 </span>
+                <a class="page-footer__telephone  page-footer__telephone--border  page-footer__telephone--pos  page-footer__telephone--color-white  page-footer__telephone--active-black" href="tel:+7812555666666">+7(812) 555-66-66</a>
             </div>
             <div class="social-list  social-list--pos">
-               <span class="social-list__slogan">Давайте дружить!</span>
+                <span class="social-list__slogan">Давайте дружить!</span>
                 <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--vk" href="#">Вконтакте</a>
                 <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Фейсбук</a>
                 <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--inst" href="#">Инстаграм</a>
@@ -117,20 +139,20 @@
         </div>
     </footer>
     <script>
-        var MainNav = document.querySelector ('.nav-menu');
-        var NavButton = document.querySelector ('.nav-menu__header-navigation'); 
-        
+        var MainNav = document.querySelector('.nav-menu');
+        var NavButton = document.querySelector('.nav-menu__header-navigation');
+
         NavButton.addEventListener('click', function() {
             if (MainNav.classList.contains('nav-menu--closed')) {
                 MainNav.classList.remove('nav-menu--closed');
-             MainNav.classList.add('nav-menu--opened');
-                }
-            else {
+                MainNav.classList.add('nav-menu--opened');
+            } else {
                 MainNav.classList.add('nav-menu--closed');
-                  MainNav.classList.remove('nav-menu--opened');
-                
-            }      
+                MainNav.classList.remove('nav-menu--opened');
+
+            }
         });
+
     </script>
 </body>
 

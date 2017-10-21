@@ -443,7 +443,7 @@ ul {
 img {
   vertical-align: top; }
 
-.features-text__advantage, .features-slider__advantage, .news__title, .news__date, .service-examples__title, .prices__title {
+.features-text__advantage, .features-slider__advantage, .news__title, .news__date, .service-examples__title, .prices__title, .service-form__title {
   font-size: 30px;
   line-height: 1;
   font-weight: 700;
@@ -2254,3 +2254,330 @@ div {
   @media (min-width: 768px) and (max-width: 1199px) {
     .prices__price-hours br {
       display: none; } }
+
+.service-form {
+  padding-bottom: 40px;
+  position: relative;
+  padding-top: 30px; }
+  @media only screen and (min-width: 768px) {
+    .service-form {
+      padding-top: 60px;
+      padding-bottom: 78px; } }
+  @media only screen and (min-width: 768px) and (min-width: 1200px) {
+    .service-form {
+      padding-bottom: 88px; } }
+  .service-form::before {
+    content: "";
+    display: block;
+    position: absolute; }
+    @media only screen and (min-width: 768px) {
+      .service-form::before {
+        top: -42px;
+        left: 0;
+        z-index: 400;
+        width: 100%;
+        height: 42px;
+        background-image: -webkit-gradient(linear, right top, left bottom, color-stop(50%, transparent), color-stop(50%, #f8f5f2)), -webkit-gradient(linear, left top, right bottom, color-stop(50%, transparent), color-stop(50%, #f8f5f2));
+        background-image: -webkit-linear-gradient(top right, transparent 50%, #f8f5f2 50%), -webkit-linear-gradient(top left, transparent 50%, #f8f5f2 50%);
+        background-image: -o-linear-gradient(top right, transparent 50%, #f8f5f2 50%), -o-linear-gradient(top left, transparent 50%, #f8f5f2 50%);
+        background-image: linear-gradient(to bottom left, transparent 50%, #f8f5f2 50%), linear-gradient(to bottom right, transparent 50%, #f8f5f2 50%);
+        background-repeat: no-repeat;
+        background-position: 0 0, 100% 0;
+        -webkit-background-size: 50.3% 100%;
+                background-size: 50.3% 100%; } }
+    @media only screen and (min-width: 1200px) {
+      .service-form::before {
+        height: 60px;
+        top: -60px; } }
+  @media only screen and (max-width: 767px) {
+    .service-form::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 30px;
+      background-image: -webkit-gradient(linear, left bottom, right top, color-stop(50%, transparent), color-stop(50%, #f8f5f2)), -webkit-gradient(linear, right bottom, left top, color-stop(50%, transparent), color-stop(50%, #f8f5f2));
+      background-image: -webkit-linear-gradient(bottom left, transparent 50%, #f8f5f2 50%), -webkit-linear-gradient(bottom right, transparent 50%, #f8f5f2 50%);
+      background-image: -o-linear-gradient(bottom left, transparent 50%, #f8f5f2 50%), -o-linear-gradient(bottom right, transparent 50%, #f8f5f2 50%);
+      background-image: linear-gradient(to top right, transparent 50%, #f8f5f2 50%), linear-gradient(to top left, transparent 50%, #f8f5f2 50%);
+      background-repeat: no-repeat;
+      background-position: 0 0, 100% 0;
+      -webkit-background-size: 50.3% 100%;
+              background-size: 50.3% 100%;
+      bottom: -30px;
+      left: 0; } }
+  .service-form--color {
+    background-color: #f8f5f2; }
+  .service-form__wrapper {
+    margin: 0 auto;
+    width: 320px; }
+    @media (min-width: 768px) and (max-width: 1200px) {
+      .service-form__wrapper {
+        width: 640px; } }
+    @media (min-width: 1200px) {
+      .service-form__wrapper {
+        width: 960px; } }
+    @media only screen and (max-width: 767px) {
+      .service-form__wrapper {
+        padding-left: 20px;
+        padding-right: 20px; } }
+    @media only screen and (min-width: 768px) {
+      .service-form__wrapper {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+                align-items: flex-start; } }
+  .service-form__title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-bottom: 30px; }
+    @media only screen and (min-width: 768px) {
+      .service-form__title {
+        font-size: 40px;
+        line-height: 1.15;
+        font-weight: 700;
+        padding-bottom: 77px;
+        text-align: left; } }
+  .service-form__description fieldset {
+    border: 0;
+    outline: 0; }
+  @media only screen and (min-width: 768px) {
+    .service-form__information {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
+  .service-form__input {
+    outline: 0;
+    border: 0;
+    padding: 15px 20px;
+    margin-bottom: 8px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    @media only screen and (min-width: 768px) {
+      .service-form__input {
+        padding: 20px;
+        margin-bottom: 35px; } }
+    .service-form__input--disabled {
+      display: none; }
+      .service-form__input--disabled:checked ~ label::after {
+        display: block; }
+    .service-form__input::-webkit-input-placeholder {
+      color: #000000;
+      opacity: 1;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: "PTSansNarrow", sans-serif, "Arial"; }
+    .service-form__input::-moz-placeholder {
+      color: #000000;
+      opacity: 1;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: "PTSansNarrow", sans-serif, "Arial"; }
+    .service-form__input:-ms-input-placeholder {
+      color: #000000;
+      opacity: 1;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: "PTSansNarrow", sans-serif, "Arial"; }
+    .service-form__input::-ms-input-placeholder {
+      color: #000000;
+      opacity: 1;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: "PTSansNarrow", sans-serif, "Arial"; }
+    .service-form__input::placeholder {
+      color: #000000;
+      opacity: 1;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: "PTSansNarrow", sans-serif, "Arial"; }
+      @media only screen and (min-width: 768px) {
+        .service-form__input::-webkit-input-placeholder {
+          font-size: 24px; }
+        .service-form__input::-moz-placeholder {
+          font-size: 24px; }
+        .service-form__input:-ms-input-placeholder {
+          font-size: 24px; }
+        .service-form__input::-ms-input-placeholder {
+          font-size: 24px; }
+        .service-form__input::placeholder {
+          font-size: 24px; } }
+    .service-form__input--border {
+      border: 1px solid #e5ddd5; }
+    .service-form__input--margin-big {
+      margin-bottom: 35px; }
+    @media only screen and (min-width: 768px) {
+      .service-form__input--min {
+        width: 33.333%; } }
+    @media only screen and (min-width: 1200px) {
+      .service-form__input--min {
+        margin-right: 3.44%;
+        width: 31%; }
+        .service-form__input--min-pos {
+          margin-right: 0; } }
+    @media only screen and (min-width: 768px) {
+      .service-form__input--first {
+        -webkit-box-ordinal-group: 0;
+        -webkit-order: -1;
+            -ms-flex-order: -1;
+                order: -1; } }
+  .service-form__main-information {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 49px; }
+    @media only screen and (min-width: 768px) {
+      .service-form__main-information {
+        padding-bottom: 40px; } }
+  .service-form__text {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 35px; }
+    @media only screen and (min-width: 768px) {
+      .service-form__text {
+        font-size: 30px;
+        line-height: 1.15;
+        padding-bottom: 50px; }
+        .service-form__text--big {
+          padding-bottom: 66px; } }
+  .service-form__model {
+    margin-right: 29px;
+    padding-top: 73px;
+    padding-bottom: 29px; }
+    @media only screen and (min-width: 768px) {
+      .service-form__model {
+        padding-top: 88px; } }
+    .service-form__model label {
+      position: relative; }
+      @media only screen and (min-width: 768px) {
+        .service-form__model label {
+          font-size: 24px; } }
+      .service-form__model label::after, .service-form__model label::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #ffffff;
+        -webkit-border-radius: 50%;
+                border-radius: 50%; }
+      .service-form__model label::before {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #e5ddd5;
+        left: 0%;
+        top: -73px; }
+        @media only screen and (min-width: 768px) {
+          .service-form__model label::before {
+            top: -88px;
+            left: 20%; } }
+      .service-form__model label::after {
+        width: 18px;
+        height: 18px;
+        border: 1px solid #e5ddd5;
+        left: 28%;
+        top: -58px;
+        display: none; }
+        @media only screen and (min-width: 768px) {
+          .service-form__model label::after {
+            top: -73px;
+            left: 45%; } }
+  .service-form__model-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    @media only screen and (min-width: 768px) {
+      .service-form__model-list {
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding-bottom: 30px; } }
+  .service-form__service-items {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .service-form__service-items label {
+      position: relative;
+      padding-left: 60px; }
+      @media only screen and (min-width: 768px) {
+        .service-form__service-items label {
+          font-size: 24px;
+          padding-right: 50px; } }
+      .service-form__service-items label::after, .service-form__service-items label::before {
+        content: "";
+        display: block;
+        position: absolute; }
+      .service-form__service-items label::before {
+        background-color: #ffffff;
+        width: 37px;
+        height: 37px;
+        border: 1px solid #e5ddd5;
+        left: 0%;
+        top: -5px; }
+        @media only screen and (min-width: 768px) {
+          .service-form__service-items label::before {
+            top: -5px;
+            left: 0%; } }
+      .service-form__service-items label::after {
+        width: 13px;
+        height: 5px;
+        border: 1px solid #000000;
+        border-right: none;
+        border-top: none;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        left: 15px;
+        top: 10px;
+        display: none; }
+        @media only screen and (min-width: 768px) {
+          .service-form__service-items label::after {
+            top: 10px;
+            left: 15px; } }
+  .service-form__service-item {
+    padding-bottom: 40px; }
+    @media only screen and (min-width: 768px) {
+      .service-form__service-item {
+        padding-bottom: 50px;
+        width: 250px;
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1; } }
+  .service-form__list {
+    padding: 0;
+    margin: 0; }
+  .service-form__additional-services {
+    padding: 0;
+    margin: 0; }
+
+.btn {
+  padding-top: 15px;
+  border: 0;
+  outline: 0;
+  background-color: #826550;
+  width: 100%;
+  font-family: "PTSansNarrow", sans-serif, "Arial"; }
