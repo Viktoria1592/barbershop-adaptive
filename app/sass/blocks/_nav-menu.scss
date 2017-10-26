@@ -39,6 +39,9 @@
         }
         &--bg-color {
             background-color: $color-menu-opened;
+            &:hover {
+                background-color: #624530;
+            }
         }
         &--pos {
             position: absolute;
@@ -49,7 +52,7 @@
     &__menu-list {
 
         a[href] {
-            @include screen ("tablet, max") {
+            @include screen ("tablet", max) {
 
             &:hover {
                 background-color: #755a46;
@@ -186,6 +189,10 @@
     left: 35%;
     background-color: $color-main;
 }
+.nav-menu--opened .nav-menu__header-navigation:active::after,
+.nav-menu--opened .nav-menu__header-navigation:active::before {
+   opacity: 0.3;
+}
 
 .nav-menu--opened .nav-menu__header-navigation {
     top: 0;
@@ -215,6 +222,9 @@
     background-color: $color-main;
     box-shadow: 0 8px 0 0 $color-main,
     0 16px 0 0 $color-main,
+}
+.nav-menu--closed .nav-menu__header-navigation:active::before {
+    opacity: 0.3;
 }
 
 @media (max-width:767px) {
