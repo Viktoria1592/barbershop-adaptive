@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>Barbershop Форма записи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.min.css">
-</head>
+    <link rel="stylesheet" href="css/styles.min.css"> </head>
 
 <body>
     <header class="page-header  page-header--color">
@@ -14,9 +13,7 @@
         <div class="page-header__logo  page-header__logo--min">
             <picture>
                 <source media="(min-width:1200px)" srcset="img/logotype-desktop.svg">
-                <source media="(min-width:768px)" srcset="img/logotype-tablet.svg">
-                <img src="img/logotype-mobile.svg" width="230" height="40" alt="Логотип">
-            </picture>
+                <source media="(min-width:768px)" srcset="img/logotype-tablet.svg"> <img src="img/logotype-mobile.svg" width="230" height="40" alt="Логотип"> </picture>
         </div>
         <nav class="nav-menu nav-menu--pos  nav-menu--color   nav-menu--closed">
             <button class="nav-menu__header-navigation  nav-menu__header-navigation--bg-color  nav-menu__header-navigation--pos" type="button"></button>
@@ -28,28 +25,26 @@
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Контакты</a></li>
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Html academy</a></li>
                 </ul>
-                <div class="nav-menu__entry">
-                    <a href="#" title="Войти">Вход</a></div>
+                <div class="nav-menu__entry"> <a href="#" title="Войти">Вход</a></div>
             </div>
         </nav>
     </header>
     <main>
         <article class="service-form  service-form--color">
             <div class="service-form__wrapper">
-                <h2 class="service-form__title">Запись на стрижку</h2>
-                <a class="service-examples__button  link-item  link-item--color-black  link-item--size-big  link-item--border-white  link-item--active-gray  link-item--pos" href="index.html">На главную</a>
-                <form action="" class="service-form__description">
+                <h2 class="service-form__title">Запись на стрижку</h2> <a class="service-examples__button  link-item  link-item--color-black  link-item--size-big  link-item--border-white  link-item--active-gray  link-item--pos" href="index.html">На главную</a>
+                <form action="" class="service-form__description" onsubmit="return validateForm()">
                     <fieldset class="service-form__main-information">
-                   <div class="service-form__information">
-                                 <input class="service-form__input  service-form__input--min  service-form__input--border" type="text" name="surname" id="surname" placeholder="Фамилия">
+                        <div class="service-form__information">
+                            <input class="service-form__input  service-form__input--required-surname  service-form__input  service-form__input--min  service-form__input--border" type="text" name="surname" id="surname" placeholder="Фамилия">
                             <label for="surname"></label>
-                            <input class="service-form__input  service-form__input--min  service-form__input--first   service-form__input--border" type="text" name="name" id="name" placeholder="Имя">
+                            <input class="service-form__input  service-form__input--required-name  service-form__input--min  service-form__input--first   service-form__input--border" type="text" name="name" id="name" placeholder="Имя">
                             <label for="name"></label>
-                            <input class="service-form__input  service-form__input--min  service-form__input--min-pos   service-form__input--border  service-form__input--margin-big" type="text" name="last-name" id="last-name" placeholder="Отчество">
+                            <input class="service-form__input  service-form__input--required  service-form__input--min  service-form__input--min-pos   service-form__input--border  service-form__input--margin-big" type="text" name="last-name" id="last-name" placeholder="Отчество">
                             <label for="last-name"></label>
-                            <input class="service-form__input  service-form__input--border" type="tel" name="number" id="number" placeholder="Контактный телефон">
+                            <input class="service-form__input  service-form__input--required-number  service-form__input--border" type="tel" name="number" id="number" placeholder="Контактный телефон">
                             <label for="number"></label>
-                            <input class="service-form__input  service-form__input--margin-big  service-form__input--border" type="email" name="email" id="email" placeholder="Контактный email">
+                            <input class="service-form__input  service-form__input--required  service-form__input--margin-big  service-form__input--border" type="email" name="email" id="email" placeholder="Контактный email">
                             <label for="email"></label>
                             <textarea class="service-form__input  service-form__input--border" name="add-information" id="add-information" cols="30" rows="10" placeholder="Доп.информация для мастера"></textarea>
                             <label for="add-information"></label>
@@ -60,29 +55,19 @@
                         <div class="service-form__model-list">
                             <div class="service-form__model">
                                 <input class="service-form__input  service-form__input--disabled" type="radio" name="model-1" id="model-1">
-                                <label for="model-1">адмирал</label>
-                                <img src="img/beard-1.svg" alt="">
-                            </div>
+                                <label for="model-1">адмирал</label> <img src="img/beard-1.svg" width="55" height="50" alt=""> </div>
                             <div class="service-form__model">
                                 <input class="service-form__input  service-form__input--disabled" type="radio" name="model-1" id="model-2">
-                                <label for="model-2">лесоруб</label>
-                                <img src="img/beard-2.svg" alt="">
-                            </div>
+                                <label for="model-2">лесоруб</label> <img src="img/beard-2.svg" width="56" height="74" alt=""> </div>
                             <div class="service-form__model">
                                 <input class="service-form__input  service-form__input--disabled" type="radio" name="model-1" id="model-3">
-                                <label for="model-3">полярник</label>
-                                <img src="img/beard-3.svg" alt="">
-                            </div>
+                                <label for="model-3">полярник</label> <img src="img/beard-3.svg" width="62" height="84" alt=""> </div>
                             <div class="service-form__model">
                                 <input class="service-form__input  service-form__input--disabled" type="radio" name="model-1" id="model-4">
-                                <label for="model-4">боярин</label>
-                                <img src="img/beard-4.svg" alt="">
-                            </div>
+                                <label for="model-4">боярин</label> <img src="img/beard-4.svg" width="58" height="100" alt=""> </div>
                             <div class="service-form__model">
                                 <input class="service-form__input  service-form__input--disabled" type="radio" name="model-1" id="model-5">
-                                <label for="model-5">мудрец</label>
-                                <img src="img/beard-5.svg" alt="">
-                            </div>
+                                <label for="model-5">мудрец</label> <img src="img/beard-5.svg" width="50" height="105" alt=""> </div>
                         </div>
                     </fieldset>
                     <fieldset class="service-form__additional-services">
@@ -101,7 +86,7 @@
                                 <label for="service-3">Причесать бороду</label>
                             </div>
                             <div class="service-form__service-item">
-                                <input class="service-form__input  service-form__input--disabled" type="checkbox" name="service-4" id="service-5">
+                                <input class="service-form__input  service-form__input--disabled" type="checkbox" name="service-4" id="service-4">
                                 <label for="service-4">Подровнять виски</label>
                             </div>
                             <div class="service-form__service-item">
@@ -114,46 +99,45 @@
                             </div>
                         </div>
                     </fieldset>
-                    <button class="btn  btn--color   link-item  link-item--type-block  link-item--size-small" type="submit">Отправить заявку</button>
+                    <button class="btn  btn--width-big  btn--color   link-item  link-item--type-block  link-item--size-small" type="submit">Отправить заявку</button>
                 </form>
             </div>
         </article>
     </main>
     <footer class="page-footer">
         <div class="page-footer__block  page-footer__wrapper">
-            <div class="page-footer__address">
-                <span class="page-footer__name">Барбершоп Бородинский</span>
-                <span class="page-footer__address-description"> г.Санкт-Петербург, ул.Большая Конюшенная, 19/8 </span>
-                <a class="page-footer__telephone  page-footer__telephone--border  page-footer__telephone--pos  page-footer__telephone--color-white  page-footer__telephone--active-black" href="tel:+7812555666666">+7(812) 555-66-66</a>
-            </div>
-            <div class="social-list  social-list--pos">
-                <span class="social-list__slogan">Давайте дружить!</span>
-                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--vk" href="#">Вконтакте</a>
-                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Фейсбук</a>
-                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--inst" href="#">Инстаграм</a>
-            </div>
-            <div class="page-footer__developer">
-                <span class="page-footer__developer-item">Разработано:</span>
-                <a class="page-footer__developer-name  link-item  link-item--type-block  link-item--pos  link-item--color-white  link-item--size-small  link-item--border-gray  link-item--active-black" href="#">Html academy</a>
-            </div>
+            <div class="page-footer__address"> <span class="page-footer__name">Барбершоп Бородинский</span> <span class="page-footer__address-description"> г.Санкт-Петербург, ул.Большая Конюшенная, 19/8 </span> <a class="page-footer__telephone  page-footer__telephone--border  page-footer__telephone--pos  page-footer__telephone--color-white  page-footer__telephone--active-black" href="tel:+7812555666666">+7(812) 555-66-66</a> </div>
+            <div class="social-list  social-list--pos"> <span class="social-list__slogan">Давайте дружить!</span> <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--vk" href="#">Вконтакте</a> <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Фейсбук</a> <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--inst" href="#">Инстаграм</a> </div>
+            <div class="page-footer__developer"> <span class="page-footer__developer-item">Разработано:</span> <a class="page-footer__developer-name  link-item  link-item--type-block  link-item--pos  link-item--color-white  link-item--size-small  link-item--border-gray  link-item--active-black" href="#">Html academy</a> </div>
         </div>
     </footer>
-    <script>
-        var MainNav = document.querySelector('.nav-menu');
-        var NavButton = document.querySelector('.nav-menu__header-navigation');
-
-        NavButton.addEventListener('click', function() {
-            if (MainNav.classList.contains('nav-menu--closed')) {
-                MainNav.classList.remove('nav-menu--closed');
-                MainNav.classList.add('nav-menu--opened');
-            } else {
-                MainNav.classList.add('nav-menu--closed');
-                MainNav.classList.remove('nav-menu--opened');
-
-            }
-        });
-
-    </script>
+    <div class="pop-up  pop-up--color">
+        <div class="pop-up__wrapper">
+            <h2 class="pop-up__title">Личный кабинет</h2>
+            <p class="pop-up__text">Введите свой логин и пароль чтобы войти</p>
+            <form class="pop-up__inner" action="" method="get">
+                <input type="text" name="login" placeholder="Логин" class="pop-up__field  pop-up__field--border  pop-up__field--login">
+                <input type="password" name="password" placeholder="Пароль" class="pop-up__field  pop-up__field--border  pop-up__field--password">
+                <input type="checkbox" id="memory" class="pop-up__checkbox">
+                <label for="memory" class="pop-up__login-checkbox"> <span class="pop-up__checkbox-indicator"></span>Запомните меня</label>
+                <a href="#" class="pop-up__restore  pop-up__restore--color">Я забыл пароль!</a>
+                <button type="submit" class="btn  btn--width-small  btn--color   link-item   link-item--size-small">Войти <span class="btn--hover-text">в личный кабинет</span></button>
+                <a class="modal-close  modal-close--tablet  link-item  link-item--color-black  link-item--size-small  link-item--border-white  link-item--active-gray  btn  btn--width-small" href="#">Закрыть</a> </form>
+        </div>
+    </div>
+    <div class="modal-overlay"></div>
+    <div class="pop-up-window  pop-up-fail  pop-up-window--color">
+        <h2 class="pop-up-window__title">Неудача</h2>
+        <p class="pop-up__text">Что-то пошло не так. Проверьте выделенные красным поля формы.</p>
+        <button type="submit" class="modal-button  btn  btn--width-middle  btn--color   link-item link-item--type-block  link-item--center   link-item--size-small">Ок</button>
+    </div>
+    <div class="pop-up-window  pop-up-success  pop-up-window--color">
+        <h2 class="pop-up-window__title">Это успех!</h2>
+        <p class="pop-up__text">Ваша заявка отправлена. Ожидайте, мы свяжемся с вами как только будет минутка.</p>
+        <button type="submit" class="modal-button-close  btn  btn--width-middle  btn--color   link-item  link-item--type-block  link-item--center   link-item--size-small">Закрыть окно</button>
+    </div>
+<script src="js/libs/swiper.min.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>

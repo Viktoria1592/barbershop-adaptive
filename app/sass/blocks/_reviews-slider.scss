@@ -13,3 +13,14 @@
     opacity: 1;
     z-index: 1;
 }
+.reviews-slider {
+    &__wrapper {
+        @include screen ("tablet") {
+            width: 543px;
+        }
+        @include screen ("desktop") {
+            width: 820px;
+        }
+        display: flex;
+    }
+}

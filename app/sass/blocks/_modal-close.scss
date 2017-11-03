@@ -1,0 +1,45 @@
+.modal-close {
+  &--tablet {
+    @include screen ("tablet") {
+      font-size: 0;
+      position: absolute;
+      right: -75px;
+      top: 55px;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+
+    }
+    &::before,
+    &::after {
+      @include pseudo;
+background-color: $color-main;
+      width: 30px;
+      height: 3px;
+      top: 15px;
+      left: 0;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+     &::after {
+      transform: rotate(-45deg);
+    }
+    &:hover {
+        @include screen ("tablet") {
+      background-color: transparent;
+      border: none;
+    }
+      }
+  }
+}
+.modal-button {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+

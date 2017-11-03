@@ -1,0 +1,152 @@
+.pop-up {
+  padding: 40px 20px;
+  display: none;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @include screen ("tablet") {
+    padding: 60px 70px;
+  }
+  &--color {
+    background-color: $color-main;
+  }
+  &--active {
+    display: block;
+    position: fixed;
+    top: 135px;
+    left: 0%;
+    right: 0;
+    max-width: 460px;
+    z-index: 600;
+    pointer-events: all;
+  }
+  &--error {
+    animation: bounce 0.6s;
+  }
+  &__wrapper {
+    margin: 0 auto;
+    width: 280px;
+    @include screen ("tablet") {
+      width: 320px;
+    }
+  }
+  &__title {
+    @extend %heading-1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-bottom: 20px;
+    @include screen ("tablet") {
+      font-size: 40px;
+    }
+  }
+  &__text {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 25px;
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__field {
+    font-size: 14px;
+    font-family: $font-family-base;
+    color: $color-base;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    margin-bottom: 8px;
+    outline: none;
+    padding: 15px;
+    padding-right: 40px;
+    vertical-align: top;
+    @include screen ("tablet") {
+      padding: 25px;
+    }
+    &--border {
+      border: 1px solid #e5ddd5;
+      border-radius: 3px;
+       &:hover {
+border-color: #d5c9bd;
+      }
+      &:focus {
+        border-color: #999999;
+      }
+    }
+    &::placeholder {
+      color: $color-base;
+      font-size: 18px;
+      opacity: 1;
+      @include screen ("tablet") {
+        font-size: 24px;
+      }
+    }
+    &--login {
+      background: url("../img/User%20copy%202.png") no-repeat 95% 15px;
+      @include screen ("tablet") {
+        background-position: 95% 25px;
+      }
+    }
+    &--password {
+      background: url("../img/Locked%202.png") no-repeat 95% 15px;
+      margin-bottom: 23px;
+      @include screen ("tablet") {
+        background-position: 95% 25px;
+      }
+    }
+  }
+  &__checkbox {
+    display: none;
+    &:checked ~ .pop-up__login-checkbox::after {
+      display: block;
+    }
+    &:checked ~ .pop-up__login-checkbox::before {
+      display: block;
+    }
+  }
+  &__restore {
+    &--color {
+      color: $color-base;
+    }
+  }
+  &__login-checkbox {
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    &::before,
+    &::after {
+      @include pseudo;
+      width: 30px;
+      height: 2px;
+      top: 17px;
+      left: 3px;
+      display: none;
+      background-color: $color-base;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+  &__checkbox-indicator {
+    width: 33px;
+    height: 33px;
+    border: 1px solid #e5ddd5;
+    position: absolute;
+    top: 0px;
+    left: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}

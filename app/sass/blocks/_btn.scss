@@ -2,10 +2,24 @@
     padding-top: 15px;
     border: 0;
     outline: 0;
-    width: 100%;
     font-family: $font-family-base;
+    &:hover {
+        cursor: pointer;
+    }
+    &--width-big {
+        width: 100%;
+    }
+    &--width-small {
+        width: 40%;
+      @include screen ("tablet") {
+      width: 100%;
+      }
+    }
+   &--width-middle {
+        width: 180px;
+    }
     &--color {
-       background-color: $color-menu; 
+       background-color: $color-menu;
         &:hover {
             background-color: #6a4d38;
         }
@@ -16,5 +30,10 @@
             background-color: #aeaeae;
         }
     }
-   
+  &--hover-text {
+    @include screen ("tablet", max) {
+      display: none;
+    }
+  }
+
 }

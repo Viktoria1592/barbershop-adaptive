@@ -1,292 +1,298 @@
 .service-form {
-    padding-bottom: 40px;
-    position: relative;
-    padding-top: 30px;
-    @include screen ("tablet") {
+  padding-bottom: 40px;
+  position: relative;
+  padding-top: 30px;
+  @include screen ("tablet") {
     padding-top: 60px;
-        padding-bottom: 78px;
-        @include screen ("desktop") {
-            padding-bottom: 88px;
+    padding-bottom: 78px;
+    @include screen ("desktop") {
+      padding-bottom: 88px;
+    }
+  }
+  &::before {
+    @include pseudo;
+    @include screen ("tablet") {
+      top: -42px;
+      left: 0;
+      z-index: 400;
+      width: 100%;
+      height: 42px;
+      background-image: linear-gradient(to bottom left, transparent 50%, #f8f5f2 50%), linear-gradient(to bottom right, transparent 50%, #f8f5f2 50%);
+      background-repeat: no-repeat;
+      background-position: 0 0, 100% 0;
+      background-size: 50.3% 100%;
+    }
+    @include screen ("desktop") {
+      height: 60px;
+      top: -60px;
+    }
+  }
+  &::after {
+    @include screen ("tablet", max) {
+      @include pseudo;
+      width: 100%;
+      height: 30px;
+      background-image: linear-gradient(to top right, transparent 50%, #f8f5f2 50%), linear-gradient(to top left, transparent 50%, #f8f5f2 50%);
+      background-repeat: no-repeat;
+      background-position: 0 0, 100% 0;
+      background-size: 50.3% 100%;
+      bottom: -30px;
+      left: 0;
+    }
+  }
+  &--color {
+    background-color: #f8f5f2;
+  }
+  &__wrapper {
+    @include wrapper;
+    @include screen ("tablet", max) {
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+    @include screen ("tablet") {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+  }
+  &__title {
+    @extend %heading-1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-bottom: 30px;
+    @include screen ("tablet") {
+      font-size: 40px;
+      line-height: 1.15;
+      font-weight: 700;
+      padding-bottom: 77px;
+      text-align: left;
+    }
+    @include screen ("desktop") {}
+  }
+  &__description {
+    fieldset {
+      border: 0;
+      outline: 0;
+    }
+  }
+  &__information {
+    @include screen ("tablet") {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__input {
+    outline: 0;
+    border: 0;
+    padding: 15px 20px;
+    margin-bottom: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    @include screen ("tablet") {
+      padding: 20px;
+      margin-bottom: 35px;
+    }
+    &--disabled {
+      display: none;
+      &:checked ~ label::after {
+        opacity: 1;
+      }
+    }
+    &::placeholder {
+      color: $color-base;
+      opacity: 1;
+      font-size: 18px;
+      font-weight: 400;
+      font-family: $font-family-base;
+      @include screen ("tablet") {
+        font-size: 24px;
+      }
+    }
+    &--border {
+      border: 1px solid #e5ddd5;
+      &:hover {
+border-color: #d5c9bd;
+      }
+      &:focus {
+        border-color: #999999;
+      }
+    }
+    &--margin-big {
+      margin-bottom: 35px;
+    }
+    &--min {
+      @include screen ("tablet") {
+        width: 33.333%;
+      }
+      @include screen ("desktop") {
+        margin-right: 3.44%;
+        width: 31%;
+        &-pos {
+          margin-right: 0;
         }
+      }
     }
-    
-              &::before {
-             @include pseudo;
-         @include screen ("tablet") {
-            top: -42px;
-            left: 0;
-             z-index: 400;
-             width: 100%;
-             height: 42px;
-             background-image: 
-                 linear-gradient(to bottom left, transparent 50%, #f8f5f2 50%),
-                 linear-gradient(to bottom right, transparent 50%, #f8f5f2 50%);
-             background-repeat: no-repeat;
-             background-position: 0 0, 100% 0;
-             background-size: 50.3% 100%;   
-            }
-                @include screen ("desktop") {
-                    height: 60px;
-                    top: -60px;
-                }
-            }
-            &::after {
-         @include screen ("tablet", max) {
-             @include pseudo;
-               width: 100%;
-             height: 30px;
-             background-image: 
-                 linear-gradient(to top right, transparent 50%, #f8f5f2 50%),
-                 linear-gradient(to top left, transparent 50%, #f8f5f2 50%);
-             background-repeat: no-repeat;
-             background-position: 0 0, 100% 0;
-             background-size: 50.3% 100%;
-            bottom: -30px;
-            left: 0;
-         }
+    &--first {
+      @include screen ("tablet") {
+        order: -1;
+      }
     }
-    &--color {
-        background-color: #f8f5f2;
+  }
+  &__main-information {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 49px;
+    @include screen ("tablet") {
+      padding-bottom: 40px;
+    }
+  }
+  &__text {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 35px;
+    @include screen ("tablet") {
+      font-size: 30px;
+      line-height: 1.15;
+      padding-bottom: 50px;
+      &--big {
+        padding-bottom: 66px;
+      }
+    }
+  }
+  &__model {
+//    margin-right: 29px;
+    padding-top: 73px;
+    padding-bottom: 29px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 33.33%;
+    @include screen ("tablet") {
+      padding-top: 88px;
+      width: auto;
+    }
+    label {
+      position: relative;
+      padding-bottom: 10px;
+      @include screen ("tablet") {
+        font-size: 24px;
+        padding-bottom: 24px;
+      }
+      &::after,
+      &::before {
+        @include pseudo;
+        background-color: $color-main;
+        border-radius: 50%;
+      }
+      &::before {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #e5ddd5;
+        left: 0%;
+        top: -73px;
+        @include screen ("tablet") {
+          top: -88px;
+          left: 20%;
+          z-index: 200;
+
+        }
+      }
+      &::after {
+        width: 18px;
+        height: 18px;
+        border: 1px solid #e5ddd5;
+        left: 28%;
+        top: -58px;
+       opacity: 0;
+        @include screen ("tablet") {
+          top: -73px;
+          left: 45%;
+          z-index: 300;
+        }
+      }
+      &:hover::before {
+        border-color: #d5c9bd;
+      }
+       &:active::before  {
+        background-color: #d5c9bd;
+      }
 
     }
-    &__wrapper {
-        @include wrapper;
-        @include screen ("tablet", max) {
-        padding-left: 20px;
-        padding-right: 20px;
-        }
+  }
+  &__model-list {
+    display: flex;
+    flex-wrap: wrap;
+    @include screen ("tablet") {
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
+  }
+  &__service-items {
+    display: flex;
+    flex-wrap: wrap;
+    label {
+      position: relative;
+      padding-left: 60px;
+      @include screen ("tablet") {
+        font-size: 24px;
+        padding-right: 50px;
+      }
+      &::after,
+      &::before {
+        @include pseudo;
+      }
+      &::before {
+        background-color: $color-main;
+        width: 37px;
+        height: 37px;
+        border: 1px solid #e5ddd5;
+        left: 0%;
+        top: -5px;
         @include screen ("tablet") {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-items: flex-start;
+          top: -5px;
+          left: 0%;
         }
-    }
-    &__title {
-        @extend %heading-1;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        padding-bottom: 30px;
+      }
+      &::after {
+        width: 13px;
+        height: 5px;
+        border: 1px solid $color-base;
+        border-right: none;
+        border-top: none;
+        transform: rotate(-45deg);
+        left: 15px;
+        top: 10px;
+        opacity: 0;
         @include screen ("tablet") {
-            
-             font-size: 40px;
-    line-height: 1.15;
-    font-weight: 700;
-            padding-bottom: 77px;
-            text-align: left;
+          top: 10px;
+          left: 15px;
         }
-        @include screen ("desktop") {
-        }
+      }
+       &:hover::before {
+        border-color: #d5c9bd;
+      }
+       &:active::before  {
+        background-color: #d5c9bd;
+      }
     }
-    &__description {
-        fieldset {
-        border: 0;
-        outline: 0;
+  }
+  &__service-item {
+    padding-bottom: 40px;
+    @include screen ("tablet") {
+      padding-bottom: 50px;
+      width: 250px;
+      flex-grow: 1;
     }
-    }
-    &__information {
-        @include screen ("tablet") {
-        display: flex;
-            flex-wrap: wrap;
-        }
-    }
-    &__input {
-        outline: 0;
-        border: 0;
-        padding: 15px 20px;
-        margin-bottom: 8px;
-        width: 100%;
-        box-sizing: border-box;
-        @include screen ("tablet") {
-            padding: 20px;
-            margin-bottom: 35px;
-        }
-        &--disabled {
-            display: none;
-        
-         &:checked ~ label::after {
-                display: block;
-            }
-        }
-        
-        &::placeholder {
-            color: $color-base;
-            opacity: 1;
-            font-size: 18px;
-            font-weight: 400;
-            font-family: $font-family-base;
-            @include screen ("tablet") {
-                font-size: 24px;
-            }
-            
-        }
-        &--border {
-            border: 1px solid #e5ddd5;
-        }
-        &--margin-big {
-            margin-bottom: 35px;
-        }
-        &--min {
-            @include screen ("tablet") {
-            width: 33.333%;
-        }
-            @include screen ("desktop") {
-                margin-right: 3.44%;
-                width: 31%;
-                
-                &-pos {
-                    margin-right: 0;
-                }
-            } 
-          
-                 
-        }
-         &--first {
-             @include screen ("tablet") {
-                order: -1;
-             }
-            }
-    }
-    &__main-information {
-        padding: 0;
-        margin: 0;
-        padding-bottom: 49px;
-        @include screen ("tablet") {
-            padding-bottom: 40px;
-        }
-    }
-    &__text {
-        text-transform: uppercase;
-        text-align: center;
-        padding-bottom: 35px;
-        
-        @include screen ("tablet") {
-            
-             font-size: 30px;
-    line-height: 1.15;
-            padding-bottom: 50px;
-            &--big {
-                padding-bottom: 66px;
-            }
-    }
-       
-        
-    }
-    &__model {
-        margin-right: 29px;
-        padding-top: 73px;
-        padding-bottom: 29px;
-        @include screen ("tablet") {
-            padding-top: 88px;
-            
-        }
-        label {
-            position: relative;
-            @include screen ("tablet") {
-                font-size: 24px;
-            }
-            &::after,
-            &::before {
-                @include pseudo;
-                background-color: $color-main;
-                border-radius: 50%; 
-                
-            }
-            &::before {
-                width: 50px;
-                height: 50px;
-                border: 1px solid #e5ddd5;
-                left: 0%;
-                top: -73px;
-                @include screen ("tablet") {
-                    top: -88px;
-                    left: 20%;
-                } 
-            }
-            &::after {
-                width: 18px;
-                height: 18px;
-                border: 1px solid #e5ddd5;
-                left: 28%;
-                top: -58px;
-                display: none;
-                 @include screen ("tablet") {
-                    top: -73px;
-                     left: 45%;
-            }
-        }
-        }
-    }
- &__model-list {
-        
-            display: flex;
-     flex-wrap: wrap;
-     @include screen ("tablet") {
-        justify-content: space-between;
-         padding-bottom: 30px; 
-     }
-        }
-    &__service-items {
-        display: flex;
-        flex-wrap: wrap;
-        
-             label {
-            position: relative;
-                 padding-left: 60px;
-
-            @include screen ("tablet") {
-                font-size: 24px;
-                padding-right: 50px;
-            }
-            &::after,
-            &::before {
-                @include pseudo;
-            }
-            &::before {
-                background-color: $color-main;
-                width: 37px;
-                height: 37px;
-                border: 1px solid #e5ddd5;
-                left: 0%;
-                top: -5px;
-                
-                @include screen ("tablet") {
-                    top: -5px;
-                    left: 0%;
-                } 
-            }
-            &::after {
-                width: 13px;
-                height: 5px;
-                border: 1px solid $color-base;
-                border-right: none;
-                border-top: none;
-                transform: rotate(-45deg);
-                left: 15px;
-                top: 10px;
-                display: none;
-                 @include screen ("tablet") {
-                    top: 10px;
-                     left: 15px;
-            }
-        }
-        }
-    }
-    &__service-item {
-        padding-bottom: 40px;
-        @include screen ("tablet") {
-            padding-bottom: 50px;
-            width: 250px;
-            flex-grow: 1;
-        }
-    }
-    &__list {
-        padding: 0;
-        margin: 0;
-    }
-    &__additional-services {
-        padding: 0;
-        margin: 0;
-    }
+  }
+  &__list {
+    padding: 0;
+    margin: 0;
+  }
+  &__additional-services {
+    padding: 0;
+    margin: 0;
+  }
 }
