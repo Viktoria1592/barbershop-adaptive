@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <title>Barbershop Форма записи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.min.css"> </head>
+    <link rel="stylesheet" href="css/styles.min.css"> 
+    <script src="flexibility.js"></script>
+    </head>
 
 <body>
     <header class="page-header  page-header--color">
@@ -51,7 +53,8 @@
                         </div>
                     </fieldset>
                     <fieldset class="service-form__list">
-                        <legend class="service-form__text">Выберите модель бороды:</legend>
+                        <div class="service-form__name">
+                            <h2 class="service-form__text">Выберите модель бороды:</h2> </div>
                         <div class="service-form__model-list">
                             <div class="service-form__model">
                                 <input class="service-form__input  service-form__input--disabled" type="radio" name="model-1" id="model-1">
@@ -71,7 +74,8 @@
                         </div>
                     </fieldset>
                     <fieldset class="service-form__additional-services">
-                        <legend class="service-form__text  service-form__text--big">Дополнительные услуги:</legend>
+                        <div class="service-form__name  service-form__name--big">
+                            <h2 class="service-form__text">Дополнительные услуги:</h2> </div>
                         <div class="service-form__service-items">
                             <div class="service-form__service-item">
                                 <input class="service-form__input  service-form__input--disabled" type="checkbox" name="service-1" id="service-1">
@@ -119,10 +123,8 @@
                 <input type="text" name="login" placeholder="Логин" class="pop-up__field  pop-up__field--border  pop-up__field--login">
                 <input type="password" name="password" placeholder="Пароль" class="pop-up__field  pop-up__field--border  pop-up__field--password">
                 <input type="checkbox" id="memory" class="pop-up__checkbox">
-                <label for="memory" class="pop-up__login-checkbox"> <span class="pop-up__checkbox-indicator"></span>Запомните меня</label>
-                <a href="#" class="pop-up__restore  pop-up__restore--color">Я забыл пароль!</a>
-                <button type="submit" class="btn  btn--width-small  btn--color   link-item   link-item--size-small">Войти <span class="btn--hover-text">в личный кабинет</span></button>
-                <a class="modal-close  modal-close--tablet  link-item  link-item--color-black  link-item--size-small  link-item--border-white  link-item--active-gray  btn  btn--width-small" href="#">Закрыть</a> </form>
+                <label for="memory" class="pop-up__login-checkbox"> <span class="pop-up__checkbox-indicator"></span>Запомните меня</label> <a href="#" class="pop-up__restore  pop-up__restore--color">Я забыл пароль!</a>
+                <button type="submit" class="btn  btn--width-small  btn--color   link-item   link-item--size-small">Войти <span class="btn--hover-text">в личный кабинет</span></button> <a class="modal-close  modal-close--tablet  link-item  link-item--color-black  link-item--size-small  link-item--border-white  link-item--active-gray  btn  btn--width-small" href="#">Закрыть</a> </form>
         </div>
     </div>
     <div class="modal-overlay"></div>
@@ -136,7 +138,7 @@
         <p class="pop-up__text">Ваша заявка отправлена. Ожидайте, мы свяжемся с вами как только будет минутка.</p>
         <button type="submit" class="modal-button-close  btn  btn--width-middle  btn--color   link-item  link-item--type-block  link-item--center   link-item--size-small">Закрыть окно</button>
     </div>
-<script src="js/libs/swiper.min.js"></script>
+    <script src="js/libs/swiper.min.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 

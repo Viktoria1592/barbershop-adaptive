@@ -1,21 +1,19 @@
 .features {
-    @include screen ("tablet", max) {
-      background-color: $color-main;
-    }
     &__wrapper {
-        @include wrapper; 
-        @media (min-width:1200px) {
+        @include wrapper;
+        @media (min-width: 1200px) {
             margin-top: -163px;
         }
     }
     &__block {
-         @include screen ("desktop") {
-        display: flex;
-    }
+        @include screen ("desktop") {
+            display: flex;
+        }
     }
 }
+
 .features-text {
-    @media (min-width: 768px) and (max-width:1199px) {
+    @media (min-width: 768px) and (max-width: 1199px) {
         display: flex;
         flex-wrap: wrap;
     }
@@ -42,7 +40,6 @@
         text-align: center;
         padding-bottom: 25px;
         padding-top: 32px;
-
         @include screen ("tablet") {
             font-size: 40px;
             line-height: 1;
@@ -86,7 +83,7 @@
     }
     &--pos {
         position: relative;
-        @media (min-width: 768px) and (max-width:1199px) {
+        @media (min-width: 768px) and (max-width: 1199px) {
             margin-top: -194px;
         }
     }
@@ -94,6 +91,7 @@
         background-color: $color-main;
     }
 }
+
 .features-stats {
     @include screen ("tablet") {
         display: flex;
@@ -124,7 +122,6 @@
         }
         &--color-4 {
             background-color: $background-color-main;
-
             @include screen ("tablet") {
                 display: none;
             }

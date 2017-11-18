@@ -81,7 +81,7 @@
                 color: #b2b2b2;
             }
         }
-            
+
         }
         &--bg-color {
             background-color: $color-menu;
@@ -93,7 +93,7 @@
             border-top: 1px solid #886e5b;
             border-bottom: 1px solid #71543f;
         }
-        &--active { 
+        &--active {
             @include screen ("tablet") {
                 position: relative;
             &::before {
@@ -258,12 +258,6 @@
             @include wrapper;
             display: flex;
             justify-content: space-between;
-            @include screen ("tablet") {
-                width: 640px;
-            }
-            @include screen ("desktop") {
-                width: 960px;
-            }
         }
         &__menu-list {
             background-color: $color-base;

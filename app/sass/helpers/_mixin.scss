@@ -50,7 +50,8 @@ div::after {
     margin: 0 auto;
     width: 320px;
     @media (min-width: 768px) and (max-width:1199px) {
-            width: 640px;
+//            width: 640px;
+      width: 83%;
         }
         @media (min-width:1200px) {
             width: 960px;

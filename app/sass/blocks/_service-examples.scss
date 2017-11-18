@@ -4,12 +4,10 @@
         padding-top: 46px;
         padding-bottom: 70px;
         box-sizing: border-box;
-
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
-
     }
     @include screen ("desktop") {
         padding-bottom: 100px;
@@ -24,8 +22,7 @@
                 @include pseudo;
                 width: 100%;
                 height: 30px;
-                background-image: linear-gradient(to top right, transparent 50%, $color-main 50%),
-                linear-gradient(to top left, transparent 50%, $color-main 50%);
+                background-image: linear-gradient(to top right, transparent 50%, $color-main 50%), linear-gradient(to top left, transparent 50%, $color-main 50%);
                 background-repeat: no-repeat;
                 background-position: 0 0, 100% 0;
                 background-size: 50.3% 100%;
@@ -33,7 +30,6 @@
                 left: 0;
             }
         }
-
         &-photo {
             &::before {
                 @include pseudo;
@@ -43,8 +39,7 @@
                     z-index: 400;
                     width: 100%;
                     height: 42px;
-                    background-image: linear-gradient(to bottom left, transparent 50%, $color-main 50%),
-                    linear-gradient(to bottom right, transparent 50%, $color-main 50%);
+                    background-image: linear-gradient(to bottom left, transparent 50%, $color-main 50%), linear-gradient(to bottom right, transparent 50%, $color-main 50%);
                     background-repeat: no-repeat;
                     background-position: 0 0, 100% 0;
                     background-size: 50.3% 100%;
@@ -62,27 +57,21 @@
                     z-index: 400;
                     width: 100%;
                     height: 30px;
-                    background-image: linear-gradient(to top right, transparent 50%, $color-main 50%),
-                    linear-gradient(to top left, transparent 50%, $color-main 50%);
+                    background-image: linear-gradient(to top right, transparent 50%, $color-main 50%), linear-gradient(to top left, transparent 50%, $color-main 50%);
                     background-repeat: no-repeat;
                     background-position: 0 0, 100% 0;
                     background-size: 50.3% 100%;
                 }
-
                 @media (min-width:768px) and (max-width:1199px) {
                     height: 42px;
                     bottom: -42px;
-
                 }
             }
         }
     }
-
     &-main--color {
         background-color: $color-main;
     }
-
-
     &--photo {
         padding-bottom: 40px;
         @include screen ("tablet") {
@@ -93,19 +82,15 @@
             padding-bottom: 90px;
         }
     }
-
-
     &__block {
         width: 100%;
         min-height: 155px;
         @include screen ("tablet") {
             padding-left: 80px;
             min-height: 160px;
-
         }
         @include screen ("desktop") {
             padding-left: 70px;
-
         }
         &--border {
             @include screen ("tablet") {
@@ -122,8 +107,6 @@
         text-transform: uppercase;
         font-weight: 700;
         padding: 15px 15px 15px 26px;
-
-
         &--pos {
             position: absolute;
             @include screen ("tablet", max) {
@@ -134,25 +117,20 @@
                 left: 0;
                 top: 40px;
             }
-
             @include screen ("desktop") {
                 right: 0;
                 top: 25px;
             }
-
         }
-
         &--color {
             color: $color-main;
             background-color: $color-menu;
         }
-
         &::after,
         &::before {
             @include pseudo;
         }
         &::before {
-
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
             border-top: 45px solid $color-menu;
@@ -165,7 +143,6 @@
             }
         }
         &::after {
-
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
             border-bottom: 45px solid $color-menu;
@@ -177,18 +154,14 @@
                 left: -10px;
             }
         }
-
     }
-
     &__title {
         @extend %heading-1;
         padding: 0;
         margin: 0;
         text-align: center;
         padding-bottom: 35px;
-
         @include screen ("tablet") {
-
             font-size: 40px;
             line-height: 1.15;
             font-weight: 700;
@@ -208,8 +181,6 @@
         @extend %heading-2;
         padding-bottom: 15px;
         display: block;
-
-
         &--pos {
             @include screen ("tablet", max) {
                 text-align: center;
@@ -227,12 +198,9 @@
             &--big {
                 @include screen ("desktop") {
                     padding-top: 130px;
-
                 }
             }
-
         }
-
     }
     &__client-review {
         margin: 0;
@@ -252,23 +220,18 @@
             @include screen ("desktop") {
                 padding-bottom: 55px;
             }
-
         }
-
     }
     &__review {
         display: flex;
-
-
         transition: all 0.2s linear;
         &--big {
             @include screen ("desktop") {
                 display: flex;
             }
         }
-
         &--slider {
-            @media (min-width: 768px) and (max-width:1199px) {
+            @media (min-width: 768px) and (max-width: 1199px) {
                 padding-top: 32px;
             }
             img {
@@ -286,17 +249,13 @@
                 }
             }
         }
-
-
         &--pos {
             position: relative;
             flex-direction: column;
             @include screen ("desktop", max) {}
-
         }
         &--border {
             border: 1px solid #e5ddd5;
-
         }
         &-prew,
         &-next {
@@ -319,16 +278,14 @@
                 @include pseudo;
                 @include triangle (black, left, 9px);
                 left: 60%;
-
             }
             &--color {
                 background-color: transparent;
                 border: 1px solid #e5ddd5;
             }
-
         }
         &-next {
-            right: 0;
+            right: 1px;
             &::before {
                 @include pseudo;
                 @include triangle (black, right, 9px);
@@ -338,8 +295,6 @@
                 background-color: transparent;
                 border: 1px solid #e5ddd5;
             }
-
-
         }
         &--big {
             @include screen ("tablet", max) {
@@ -354,17 +309,13 @@
             @include screen ("tablet", max) {
                 margin-bottom: 23px;
             }
-
             @media (min-width:768px) and (max-width:1199px) {
                 margin-bottom: 40px;
                 width: 100%;
-
             }
             @include screen ("desktop") {
                 width: 33.333%;
                 margin-right: 39px;
-
-
                 &:last-child {
                     margin-right: 0;
                 }
@@ -385,10 +336,7 @@
             @media (min-width:768px) and (max-width:1199px) {
                 flex-direction: row;
             }
-
-
         }
-
     }
     &__client {
         &--pos {
@@ -397,7 +345,6 @@
                 margin-right: 20px;
             }
         }
-
         &--main {
             @include screen ("tablet") {
                 margin-left: 26px;
@@ -407,14 +354,12 @@
                 padding-top: 31px;
             }
         }
-
         &-item {
             @include screen ("tablet") {
                 padding-left: 50px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-
             }
             @include screen ("desktop") {
                 padding-left: 35px;
@@ -428,7 +373,6 @@
         @include screen ("tablet") {
             width: 270px;
             height: 293px;
-
         }
         @include screen ("desktop") {
             width: 294px;
@@ -442,9 +386,7 @@
             @include screen ("desktop") {
                 width: 480px;
                 height: 480px;
-
             }
-
         }
         &--pos {
             @include screen ("tablet", max) {
@@ -465,10 +407,8 @@
         @include screen ("tablet", max) {
             display: none;
         }
-
         @include screen ("tablet") {
             padding: 6px 30px;
-
         }
     }
     &__name-item {
@@ -483,7 +423,6 @@
             height: 30px;
             top: 0;
             left: 0;
-
         }
         &--scissors {
             padding-left: 38px;
@@ -499,7 +438,6 @@
                 background: url("../img/beard-mobile.svg") no-repeat;
                 width: 22px;
                 height: 22px;
-
             }
         }
         &--mustache {
@@ -514,11 +452,10 @@
     }
     &__control {
         @include screen ("tablet") {
-        bottom: 70px!important;
+            bottom: 70px!important;
         }
         @include screen ("desktop") {
             bottom: 50px!important;
         }
     }
-
 }

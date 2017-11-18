@@ -3,7 +3,7 @@
 #reviews-slide-3:checked ~.slider__control label[for="reviews-slide-3"] {
     background-color: $color-slider;
             border-color: $color-slider;
-    
+
 }
 
 #reviews-slide-1:checked ~ .slider__block .slider-1,
@@ -16,7 +16,8 @@
 .reviews-slider {
     &__wrapper {
         @include screen ("tablet") {
-            width: 543px;
+            min-width: 520px;
+          width: 70%;
         }
         @include screen ("desktop") {
             width: 820px;

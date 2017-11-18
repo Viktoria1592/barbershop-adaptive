@@ -1,39 +1,38 @@
 .btn {
-    padding-top: 15px;
-    border: 0;
-    outline: 0;
-    font-family: $font-family-base;
-    &:hover {
-        cursor: pointer;
-    }
-    &--width-big {
-        width: 100%;
-    }
-    &--width-small {
-        width: 40%;
-      @include screen ("tablet") {
+  padding-top: 15px;
+  border: 0;
+  outline: 0;
+  font-family: $font-family-base;
+  &:hover {
+    cursor: pointer;
+  }
+  &--width-big {
+    width: 100%;
+  }
+  &--width-small {
+    width: 40%;
+    @include screen ("tablet") {
       width: 100%;
-      }
     }
-   &--width-middle {
-        width: 180px;
+  }
+  &--width-middle {
+    width: 180px;
+  }
+  &--color {
+    background-color: $color-menu;
+    &:hover {
+      background-color: #6a4d38;
     }
-    &--color {
-       background-color: $color-menu;
-        &:hover {
-            background-color: #6a4d38;
-        }
-        &:active {
-            color: #978374;
-        }
-        &:disabled {
-            background-color: #aeaeae;
-        }
+    &:active {
+      color: #978374;
     }
+    &:disabled {
+      background-color: #aeaeae;
+    }
+  }
   &--hover-text {
     @include screen ("tablet", max) {
       display: none;
     }
   }
-
 }
